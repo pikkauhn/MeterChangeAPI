@@ -57,11 +57,11 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[8.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[8.0.13, )"
             },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
