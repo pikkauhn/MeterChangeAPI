@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using MeterChangeApi.Models;
 using MeterChangeApi.Repositories.Interfaces;
 using MeterChangeApi.Services.Interfaces;
 
-namespace MeterChangeAPI.Services
+namespace MeterChangeApi.Services
 {
     public class AddressService : IAddressService
     {
@@ -29,7 +30,17 @@ namespace MeterChangeAPI.Services
 
         public async Task<Address?> GetAddressByIdAsync(int id)
         {
-            return await _addressRepository.GetByIdAsync(id);
+            if (id <= 0)
+            {
+                throw new ArgumentException("Invalid Address ID");
+            }
+
+            var address = await _addressRepository.GetByIdAsync(id);
+            if (address == null)
+            {
+                throw new KeyNotFoundException($"Address with ID {id} not found.");
+            }
+            return address;
         }
 
         public async Task<Address?> GetAddressByLocationIcnAsync(int? locationIcn)
@@ -55,6 +66,27 @@ namespace MeterChangeAPI.Services
         public async Task<IEnumerable<Address>> GetAllAddressesAsync()
         {
             return await _addressRepository.GetAllAsync();
+        }
+
+        public async Task<(List<Address>, int)> GetPaginatedAddressesAsync(int pageNumber, int pageSize)
+        {
+            return await _addressRepository.GetPaginatedAddressesAsync(pageNumber, pageSize);
+        }
+
+        public async Task<MemoryStream> ExportAddressesToJsonAsync()
+        {
+            var addresses = await _addressRepository.GetAllAsync();
+
+            var jsonOptions = new JsonSerializerOptions { WriteIndented = true};
+            var json = JsonSerializer.Serialize(addresses, jsonOptions);
+
+            var memoryStream = new MemoryStream();
+            var writer = new StreamWriter(memoryStream);
+            await writer.WriteAsync(json);
+            await writer.FlushAsync();
+            memoryStream.Position = 0;
+
+            return memoryStream;
         }
 
         public async Task UpdateAddressAsync(Address address)

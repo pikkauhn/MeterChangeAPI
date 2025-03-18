@@ -27,9 +27,35 @@ namespace MeterChangeApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Address>>> GetAddresses()
+        public async Task<IActionResult> GetPaginatedAddresses(int pageNumber, int pageSize)
         {
-            return Ok(await _addressService.GetAllAddressesAsync());
+            if (pageNumber < 1 || pageSize < 1)
+            {
+                return BadRequest("Invalid page number or page size.");
+            }
+
+            var (addresses, totalCount) = await _addressService.GetPaginatedAddressesAsync(pageNumber, pageSize);
+            var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+
+            var result = new
+            {
+                Addresses = addresses,
+                TotalCount = totalCount,
+                CurrentPage = pageNumber,
+                PageSize = pageSize,
+                TotalPages = totalPages
+            };
+
+            return Ok(result);
+
+        }
+
+        [HttpGet("export-json")]
+        public async Task<IActionResult> ExportAddressesToJson()
+        {
+            var memoryStream = await _addressService.ExportAddressesToJsonAsync();
+
+            return File(memoryStream, "application/json", "addresses.json");
         }
 
         [HttpPost]
@@ -58,6 +84,12 @@ namespace MeterChangeApi.Controllers
             return NoContent();
         }
 
+        [HttpGet("getalladdresses")]
+        public async Task<IActionResult> GetAddresses(int pageNumber, int pageSize)
+        {
+            return Ok(await _addressService.GetAllAddressesAsync());
+        }
+
         [HttpGet("range")]
         public async Task<ActionResult<IEnumerable<Address>>> GetAddressesByRange(double x, double y, double distanceInFeet)
         {
@@ -74,7 +106,7 @@ namespace MeterChangeApi.Controllers
         public async Task<ActionResult<Address>> GetAddressByLocationIcn(int? locationIcn)
         {
             var address = await _addressService.GetAddressByLocationIcnAsync(locationIcn);
-            if(address == null)
+            if (address == null)
             {
                 return NotFound();
             }

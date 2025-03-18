@@ -3,29 +3,29 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MeterChangeApi.Models
 {
-    public class Meter
+    public class Wmeter
     {
         [Key]
-        public int MeterID { get; set; }
+        public int meterID { get; set; }
 
         public int? Rte_No { get; set; }
         public int? Read_Sequence { get; set; }
         public int? Read_Order { get; set; }
-        public string Meter_SN { get; set; } = string.Empty;
-        public string Meter_Manufacturer { get; set; } = string.Empty;
-        public string Meter_Size_Desc { get; set; } = string.Empty;
+        public int meter_SN { get; set; }
+        public string meter_Manufacturer { get; set; } = string.Empty;
+        public string meter_Size_Desc { get; set; } = string.Empty;
         public decimal? Lat_DD { get; set; }
         public decimal? Lon_DD { get; set; }
-
+        
         public int? AddressID { get; set; }
 
         [ForeignKey("AddressID")]
         public virtual Address? Address { get; set; }
 
         public int? EndpointID { get; set; }
-        
+
         [ForeignKey("EndpointID")]
-        public virtual Endpoint? Endpoint { get; set; }
+        public virtual WEndpoint? WEndpoint { get; set; }
 
     }
 }

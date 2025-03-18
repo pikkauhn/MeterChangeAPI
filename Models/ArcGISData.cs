@@ -13,7 +13,7 @@ namespace MeterChangeApi.Models
         public int EndpointID { get; set; }
         
         [ForeignKey("EndpointID")]
-        public virtual Endpoint Endpoint { get; set; } = null!;
+        public virtual WEndpoint WEndpoint { get; set; } = null!;
         public string CollectedBy { get; set; } = string.Empty;
         public string DeviceType { get; set; } = string.Empty;
         public string DeviceID { get; set; } = string.Empty;

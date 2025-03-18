@@ -1,11 +1,11 @@
-namespace MeterChangeAPI.Interfaces
+namespace MeterChangeApi.Interfaces
 {
     public interface IArcGISData
     {
         int ArcGISDataID { get; set; }
         int? OBJECTID { get; set; }
         int EndpointID { get; set; }
-        Endpoint Endpoint { get; set; } // Or IEndpoint if you have an IEndpoint interface
+        IEndpoint WEndpoint { get; set; } // Or IEndpoint if you have an IEndpoint interface
         string CollectedBy { get; set; }
         string DeviceType { get; set; }
         string DeviceID { get; set; }

@@ -6,6 +6,8 @@ namespace MeterChangeApi.Services.Interfaces
     {
         Task<Address?> GetAddressByIdAsync(int id);
         Task<IEnumerable<Address>> GetAllAddressesAsync();
+        Task<(List<Address>, int)> GetPaginatedAddressesAsync(int pageNumber, int pageSize);
+        Task<MemoryStream> ExportAddressesToJsonAsync();
         Task AddAddressAsync(Address address);
         Task UpdateAddressAsync(Address address);
         Task DeleteAddressAsync(int id);

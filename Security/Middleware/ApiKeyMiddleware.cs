@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MeterChangeAPI.Security.Middleware
+namespace MeterChangeApi.Security.Middleware
 {
     public class ApiKeyMiddleware
     {

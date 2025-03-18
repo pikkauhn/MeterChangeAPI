@@ -10,8 +10,8 @@ namespace MeterChangeApi.Data
         }
 
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<Meter> Meters { get; set; }
-        public DbSet<Models.Endpoint> Endpoints { get; set; }
+        public DbSet<Wmeter> meters { get; set; }
+        public DbSet<Models.WEndpoint> endpoints { get; set; }
         public DbSet<ArcGISData> ArcGISData { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

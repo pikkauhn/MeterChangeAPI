@@ -1,10 +1,15 @@
-using MeterChangeApi.Data;
-using MeterChangeApi.Repositories.Interfaces;
-using MeterChangeApi.Services.Interfaces;
-using MeterChangeAPI.Repository;
-using MeterChangeAPI.Security.Middleware;
-using MeterChangeAPI.Services;
+using MeterChangeApi.Security.Middleware;
 using Microsoft.EntityFrameworkCore;
+
+using MeterChangeApi.Data;
+using MeterChangeApi.Services;
+using MeterChangeApi.Repositories;
+using MeterChangeApi.Services.Interfaces;
+using MeterChangeApi.Repositories.Interfaces;
+using MeterChangeAPI.Repositories.Interfaces;
+using MeterChangeAPI.Repositories;
+using MeterChangeAPI.Services.Interfaces;
+using MeterChangeAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +35,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+builder.Services.AddScoped<IArcGISDataRepository, ArcGISDataRepository>();
+builder.Services.AddScoped<IMeterRepository, MeterRepository>();
+builder.Services.AddScoped<IEndpointRepository, EndpointRepository>();
 builder.Services.AddScoped<IAddressService, AddressService>();
+builder.Services.AddScoped<IArcGISDataService, ArcGISDataService>();
+builder.Services.AddScoped<IMeterService, MeterService>();
+builder.Services.AddScoped<IEndpointService, EndpointService>();
 
 var app = builder.Build();
 
@@ -46,6 +57,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseMiddleware<ApiKeyMiddleware>();
+// app.UseMiddleware<ApiKeyMiddleware>();
 
 app.Run();

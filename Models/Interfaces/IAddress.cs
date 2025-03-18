@@ -1,4 +1,4 @@
-namespace MeterChangeAPI.Interfaces
+namespace MeterChangeApi.Interfaces
 {
     public interface IAddress
     {
@@ -19,6 +19,6 @@ namespace MeterChangeAPI.Interfaces
         DateTime? SL_Install_Ticket_Date { get; set; }
         string SL_Ticket_Material_US { get; set; }
         string SL_Material_Cust_Side { get; set; }
-        ICollection<IMeter> Meters { get; set; }
+        ICollection<IMeter> meters { get; set; }
     }
 }

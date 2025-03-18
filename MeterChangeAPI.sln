@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterChangeAPI", "MeterChangeAPI.csproj", "{55F588FD-6573-7609-1F83-D9B9B88FB87B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterChangeApi", "MeterChangeApi.csproj", "{55F588FD-6573-7609-1F83-D9B9B88FB87B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

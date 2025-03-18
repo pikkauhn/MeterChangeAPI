@@ -4039,11 +4039,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeAPI.csproj",
-      "projectName": "MeterChangeAPI",
-      "projectPath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeApi\\MeterChangeApi.csproj",
+      "projectName": "MeterChangeApi",
+      "projectPath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeApi\\MeterChangeApi.csproj",
       "packagesPath": "C:\\Users\\ZBurns\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\obj\\",
+      "outputPath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

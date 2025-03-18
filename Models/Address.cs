@@ -24,6 +24,6 @@ namespace MeterChangeApi.Models
         public string SL_Ticket_Material_US { get; set; } = string.Empty;
         public string SL_Material_Cust_Side { get; set; } = string.Empty;
 
-        public virtual ICollection<Meter> Meters { get; set; } = new List<Meter>();
+        public virtual ICollection<Wmeter> meters { get; set; } = new List<Wmeter>();
     }
 }
