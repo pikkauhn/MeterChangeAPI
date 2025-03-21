@@ -2,8 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using MeterChangeApi.Models;
 using MeterChangeApi.Services.Interfaces;
 using MeterChangeApi.Middleware.ExceptionHandling;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MeterChangeApi.Controllers
 {
@@ -71,12 +69,12 @@ namespace MeterChangeApi.Controllers
                     return BadRequest("Invalid page number or page size.");
                 }
 
-                var (arcGISData, totalCount) = await _arcGISDataService.GetPaginatedArcGISDataAsync(pageNumber, pageSize); // Fixed naming
+                var (arcGISData, totalCount) = await _arcGISDataService.GetPaginatedArcGISDataAsync(pageNumber, pageSize);
                 var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
 
                 var result = new
                 {
-                    ArcGISData = arcGISData, // Fixed naming
+                    ArcGISData = arcGISData,
                     TotalCount = totalCount,
                     CurrentPage = pageNumber,
                     PageSize = pageSize,
