@@ -1,12 +1,11 @@
-using MeterChangeApi.Models;
-using MeterChangeApi.Services;
-using MeterChangeAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using MeterChangeApi.Models;
+using MeterChangeApi.Services.Interfaces;
+using MeterChangeApi.Middleware.ExceptionHandling;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-
-namespace MeterChangeAPI.Controllers
+namespace MeterChangeApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -22,66 +21,140 @@ namespace MeterChangeAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ArcGISData>> GetArcGISData(int id)
         {
-            var arcGISData = await _arcGISDataService.GetArcGISDataByIdAsync(id);
-            if (arcGISData == null)
+            try
             {
-                return NotFound();
+                var arcGISData = await _arcGISDataService.GetArcGISDataByIdAsync(id);
+                return Ok(arcGISData);
             }
-            return arcGISData;
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (InvalidInputException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpGet("getallarcgisdata")]
         public async Task<ActionResult<IEnumerable<ArcGISData>>> GetArcGISData()
         {
-            return Ok(await _arcGISDataService.GetAllArcGISDataAsync());
+            try
+            {
+                return Ok(await _arcGISDataService.GetAllArcGISDataAsync());
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ArcGISData>>> GetPaginatedArcGISData(int pageNumber, int pageSize)
         {
-            if (pageNumber < 1 || pageSize < 1)
+            try
             {
-                return BadRequest("Invalid page number or page size.");
+                if (pageNumber < 1 || pageSize < 1)
+                {
+                    return BadRequest("Invalid page number or page size.");
+                }
+
+                var (arcGISData, totalCount) = await _arcGISDataService.GetPaginatedArcGISDataAsync(pageNumber, pageSize); // Fixed naming
+                var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+
+                var result = new
+                {
+                    ArcGISData = arcGISData, // Fixed naming
+                    TotalCount = totalCount,
+                    CurrentPage = pageNumber,
+                    PageSize = pageSize,
+                    TotalPages = totalPages
+                };
+
+                return Ok(result);
             }
-
-            var (endpoints, totalCount) = await _arcGISDataService.GetPaginatedArcGISDataAsync(pageNumber, pageSize);
-            var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
-
-            var result = new
+            catch (ServiceException ex)
             {
-                Endpoints = endpoints,
-                TotalCount = totalCount,
-                CurrentPage = pageNumber,
-                PageSize = pageSize,
-                TotalPages = totalPages
-            };
-
-            return Ok(result);
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpPost]
         public async Task<ActionResult<ArcGISData>> CreateArcGISData(ArcGISData arcGISData)
         {
-            var createdArcGISData = await _arcGISDataService.CreateArcGISDataAsync(arcGISData);
-            return CreatedAtAction(nameof(GetArcGISData), new { id = createdArcGISData.ArcGISDataID }, createdArcGISData);
+            try
+            {
+                var createdArcGISData = await _arcGISDataService.CreateArcGISDataAsync(arcGISData);
+                return CreatedAtAction(nameof(GetArcGISData), new { id = createdArcGISData.ArcGISDataID }, createdArcGISData);
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> CreateArcGISData(int id, ArcGISData arcGISData)
+        public async Task<IActionResult> UpdateArcGISData(int id, ArcGISData arcGISData)
         {
-            if (id != arcGISData.ArcGISDataID)
+            try
             {
-                return BadRequest();
+                if (id != arcGISData.ArcGISDataID)
+                {
+                    return BadRequest("ArcGISData ID mismatch.");
+                }
+                await _arcGISDataService.UpdateArcGISDataAsync(arcGISData);
+                return NoContent();
             }
-            await _arcGISDataService.UpdateArcGISDataAsync(arcGISData);
-            return NoContent();
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteArcGISData(int id)
         {
-            await _arcGISDataService.DeleteArcGISDataAsync(id);
-            return NoContent();
+            try
+            {
+                await _arcGISDataService.DeleteArcGISDataAsync(id);
+                return NoContent();
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
     }
 }

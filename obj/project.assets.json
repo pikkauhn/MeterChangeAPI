@@ -4028,6 +4028,7 @@
       "Microsoft.AspNetCore.OpenApi >= 8.0.13",
       "Microsoft.EntityFrameworkCore >= 8.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.13",
+      "Microsoft.Extensions.Logging >= 8.0.1",
       "MySql.EntityFrameworkCore >= 9.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
@@ -4095,6 +4096,10 @@
             "target": "Package",
             "version": "[8.0.13, )"
           },
+          "Microsoft.Extensions.Logging": {
+            "target": "Package",
+            "version": "[8.0.1, )"
+          },
           "MySql.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.0, )"
@@ -4123,7 +4128,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

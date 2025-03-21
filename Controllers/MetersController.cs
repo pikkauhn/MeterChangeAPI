@@ -1,5 +1,6 @@
 using MeterChangeApi.Models;
 using MeterChangeApi.Services.Interfaces;
+using MeterChangeApi.Middleware.ExceptionHandling;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeterChangeApi.Controllers
@@ -18,67 +19,140 @@ namespace MeterChangeApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Wmeter>> GetMeter(int id)
         {
-            var meter = await _meterService.GetMeterByIdAsync(id);
-            if (meter == null)
+            try
             {
-                return NotFound();                
+                var meter = await _meterService.GetMeterByIdAsync(id);
+                return Ok(meter);
             }
-            return meter;
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (InvalidInputException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpGet("getallmeters")]
         public async Task<ActionResult<IEnumerable<Wmeter>>> GetMeters()
         {
-            return Ok(await _meterService.GetAllMetersAsync());
+            try
+            {
+                return Ok(await _meterService.GetAllMetersAsync());
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpGet]
         public async Task<IActionResult> GetPaginatedMeters(int pageNumber, int pageSize)
         {
-            if (pageNumber < 1 || pageSize < 1)
+            try
             {
-                return BadRequest("Invalid page number or page size.");
+                if (pageNumber < 1 || pageSize < 1)
+                {
+                    return BadRequest("Invalid page number or page size.");
+                }
+
+                var (meters, totalCount) = await _meterService.GetPaginatedMetersAsync(pageNumber, pageSize);
+                var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+
+                var result = new
+                {
+                    Meters = meters,
+                    TotalCount = totalCount,
+                    CurrentPage = pageNumber,
+                    PageSize = pageSize,
+                    TotalPages = totalPages
+                };
+
+                return Ok(result);
             }
-
-            var (meters, totalCount) = await _meterService.GetPaginatedMetersAsync(pageNumber, pageSize);
-            var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
-
-            var result = new
+            catch (ServiceException ex)
             {
-                Meters = meters,
-                TotalCount = totalCount,
-                CurrentPage = pageNumber,
-                PageSize = pageSize,
-                TotalPages = totalPages
-            };
-
-            return Ok(result);
-
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpPost]
         public async Task<ActionResult<Wmeter>> AddMeter(Wmeter meter)
         {
-            var createdMeter = await _meterService.CreateMeterAsync(meter);
-            return CreatedAtAction(nameof(GetMeter), new { id = createdMeter.meterID }, createdMeter);
+            try
+            {
+                var createdMeter = await _meterService.CreateMeterAsync(meter);
+                return CreatedAtAction(nameof(GetMeter), new { id = createdMeter.meterID }, createdMeter);
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateMeter(int id, Wmeter meter)
         {
-            if (id != meter.meterID)
+            try
             {
-                return BadRequest();
+                if (id != meter.meterID)
+                {
+                    return BadRequest("Meter ID mismatch.");
+                }
+                await _meterService.UpdateMeterAsync(meter);
+                return NoContent();
             }
-            await _meterService.UpdateMeterAsync(meter);
-            return NoContent();
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMeter(int id)
         {
-            await _meterService.DeleteMeterAsync(id);
-            return NoContent();
+            try
+            {
+                await _meterService.DeleteMeterAsync(id);
+                return NoContent();
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
     }
 }

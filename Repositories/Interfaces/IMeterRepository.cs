@@ -4,7 +4,7 @@ namespace MeterChangeApi.Repositories.Interfaces
 {
     public interface IMeterRepository
     {
-        Task<Wmeter?> GetByIdAsync(int id);
+        Task<Wmeter> GetByIdAsync(int id);
         Task<IEnumerable<Wmeter>> GetAllAsync();
         Task<(List<Wmeter>, int)> GetPaginatedMetersAsync(int pageNumber, int pageSize);
         Task<Wmeter> AddAsync(Wmeter meter);

@@ -1,173 +1,131 @@
+using Microsoft.EntityFrameworkCore;
+
 using MeterChangeApi.Data;
 using MeterChangeApi.Models;
 using MeterChangeApi.Repositories.Interfaces;
-using Microsoft.EntityFrameworkCore;
+using MeterChangeApi.Middleware.ExceptionHandling;
 
 namespace MeterChangeApi.Repositories
 {
     public class AddressRepository : IAddressRepository, IRepository<Address>
     {
         private readonly ChangeOutContext _dbContext;
+        private readonly IDatabaseOperationHandler _dbOperationHandler;
 
-        public AddressRepository(ChangeOutContext dbContext)
+        public AddressRepository(ChangeOutContext dbContext, IDatabaseOperationHandler databaseOperationHandler)
         {
             _dbContext = dbContext;
+            _dbOperationHandler = databaseOperationHandler;
         }
 
         public async Task AddAsync(Address entity)
         {
-            try
+            await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
                 _dbContext.Addresses.Add(entity);
                 await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in AddAsync: {ex.Message}");
-                throw;
-            }
+            }, "Error adding address.");
         }
 
         public async Task DeleteAsync(int id)
         {
-            try
+            await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-                var address = await _dbContext.Addresses.FindAsync(id);
-                if (address != null)
+                var address = await _dbContext.Addresses.FindAsync(id) ?? throw new NotFoundException($"Address with ID {id} not found.");
+                var meters = _dbContext.meters.Where(m => m.AddressID == id);
+                foreach (var meter in meters)
                 {
-                    _dbContext.Addresses.Remove(address);
-                    await _dbContext.SaveChangesAsync();
+                    meter.AddressID = null;
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in DeleteAsync: {ex.Message}");
-                throw;
-            }
+                await _dbContext.SaveChangesAsync();
+
+                _dbContext.Addresses.Remove(address);
+                await _dbContext.SaveChangesAsync();
+
+            }, $"Error deleting address with ID {id}.");
         }
 
         public async Task<IEnumerable<Address>> GetAllAsync()
         {
-            try
-            {
-                return await _dbContext.Addresses.ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in GetAllAsync: {ex.Message}");
-                throw;
-            }
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
+            await _dbContext.Addresses.ToListAsync(), "Error retrieving all addresses.");
         }
 
-        public async Task<Address?> GetByIdAsync(int id)
+        public async Task<Address> GetByIdAsync(int id)
         {
-            try
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-                return await _dbContext.Addresses.FindAsync(id);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in GetByIdAsync: {ex.Message}");
-                throw;
-            }
+                var address = await _dbContext.Addresses.FirstOrDefaultAsync(a => a.AddressID == id) 
+                ?? throw new NotFoundException($"Address with ID {id} not found.");
+
+                return address;
+
+            }, $"Error retrieving address with ID {id}.");
         }
 
         public async Task UpdateAsync(Address entity)
         {
-            try
+            await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
                 _dbContext.Addresses.Update(entity);
                 await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in UpdateAsync: {ex.Message}");
-                throw;
-            }
+            }, $"Error updating address with ID {entity.AddressID}.");
         }
 
         public async Task<IEnumerable<Address>> GetAddressesByRangeAsync(double x, double y, double distanceInFeet)
         {
-            try
-            {
-                string sql = @"
-                        SELECT *
-                        FROM Addresses
-                        WHERE ST_Distance(POINT(Addresses.Location_Longitude, Addresses.Location_Latitude), POINT({0}, {1})) <= {2}";
+            string sql = @"
+        SELECT *
+        FROM Addresses
+        WHERE ST_Distance(POINT(Addresses.Location_Longitude, Addresses.Location_Latitude), POINT({0}, {1})) <= {2}";
 
-                return await _dbContext.Addresses.FromSqlRaw(sql, x, y, distanceInFeet).ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in GetAddressesByRangeAsync: {ex.Message}");
-                throw;
-            }
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
+            await _dbContext.Addresses.FromSqlRaw(sql, x, y, distanceInFeet).ToListAsync(), $"Error retrieving addresses by range (x:{x}, y:{y}, distance:{distanceInFeet}).");
         }
 
         public async Task<IEnumerable<Address>> GetAddressesByStreetAsync(string street)
         {
-            try
-            {
-            return await _dbContext.Addresses
-            .Where(a => a.Location_Address_Line1.Contains(street))
-            .ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in GetAddressesByStreetAsync: {ex.Message}");
-                throw;
-            }
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
+            await _dbContext.Addresses.Where(a => a.Location_Address_Line1.Contains(street)).ToListAsync(), $"Error retrieving addresses by street '{street}'.");
         }
 
         public async Task<(List<Address>, int)> GetPaginatedAddressesAsync(int pageNumber, int pageSize)
         {
-            try
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-            var offset = (pageNumber - 1) * pageSize;
+                var offset = (pageNumber - 1) * pageSize;
 
-            var addresses = await _dbContext.Addresses
-            .Skip(offset)
-            .Take(pageSize)
-            .ToListAsync();
+                var addresses = await _dbContext.Addresses
+                    .OrderBy(a => a.AddressID)
+                    .Skip(offset)
+                    .Take(pageSize)
+                    .ToListAsync();
 
-            var totalCount = await _dbContext.Addresses.CountAsync();
-            return (addresses, totalCount);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in GetPaginatedAddressesAsync: {ex.Message}");
-                throw;
-            }
+                var totalCount = await _dbContext.Addresses.CountAsync();
+                return (addresses, totalCount);
+            }, $"Error retrieving paginated addresses (page:{pageNumber}, pageSize:{pageSize}).");
         }
 
-        public async Task<Address?> GetAddressByLocationIcnAsync(int? locationIcn)
+        public async Task<Address> GetAddressByLocationIcnAsync(int locationIcn)
         {
-            try
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-            return await _dbContext.Addresses
-            .FirstOrDefaultAsync(async => async.Location_ICN == locationIcn);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in GetAddressByLocationIcnAsync: {ex.Message}");
-                throw;
-            }
+                var address = await _dbContext.Addresses.FirstOrDefaultAsync(a => a.Location_ICN == locationIcn) 
+                ?? throw new NotFoundException($"Address with locationICN {locationIcn} not found.");
+
+                return address;
+            }, $"Error retrieving address with locationICN {locationIcn}.");
         }
 
         public async Task<IEnumerable<Address>> GetAddressesByBuildingStatusAsync(string buildingStatus)
         {
-            try
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-            return await _dbContext.Addresses
-            .Where(a => a.Building_Status == buildingStatus)
-            .ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in GetAddressesByBuildingStatusAsync: {ex.Message}");
-                throw;
-            }
+                var addresses = await _dbContext.Addresses.Where(a => a.Building_Status == buildingStatus).ToListAsync()
+                ?? throw new NotFoundException($"Addresses with buildingStatus {buildingStatus} not found.");
+                                
+                return addresses;
+            }, $"Error retrieving addresses with buildingStatus {buildingStatus}.");
         }
-
     }
 }

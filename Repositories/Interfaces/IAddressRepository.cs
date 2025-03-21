@@ -11,7 +11,7 @@ namespace MeterChangeApi.Repositories.Interfaces
         // Find addresses by pagination
         Task<(List<Address>, int)> GetPaginatedAddressesAsync(int pageNumber, int pageSize);
         // Find addresses by location ICN
-        Task<Address?> GetAddressByLocationIcnAsync(int? locationIcn);
+        Task<Address> GetAddressByLocationIcnAsync(int locationIcn);
 
         //Find Addresses with a specific Building Status
         Task<IEnumerable<Address>> GetAddressesByBuildingStatusAsync(string buildingStatus);

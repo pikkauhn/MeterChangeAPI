@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeterChangeAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b02f8b1162f09a3c03baabcd04644181f3e29458")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dff592a5bbe95ca4fa94fd61df1dc89b6870d600")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeterChangeAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeterChangeAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

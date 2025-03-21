@@ -1,9 +1,7 @@
 using MeterChangeApi.Models;
-using MeterChangeApi.Services;
 using MeterChangeApi.Services.Interfaces;
+using MeterChangeApi.Middleware.ExceptionHandling;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MeterChangeApi.Controllers
 {
@@ -21,67 +19,140 @@ namespace MeterChangeApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<WEndpoint>> GetEndpoint(int id)
         {
-            var endpoint = await _endpointService.GetEndpointByIdAsync(id);
-            if (endpoint == null)
+            try
             {
-                return NotFound();
+                var endpoint = await _endpointService.GetEndpointByIdAsync(id);
+                return Ok(endpoint);
             }
-            return endpoint;
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (InvalidInputException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpGet("getallendpoints")]
-        public async Task<ActionResult<WEndpoint>> GetAllEndpoints()
+        public async Task<ActionResult<IEnumerable<WEndpoint>>> GetAllEndpoints()
         {
-            return Ok(await _endpointService.GetAllEndpointsAsync());
+            try
+            {
+                return Ok(await _endpointService.GetAllEndpointsAsync());
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpGet]
         public async Task<IActionResult> GetPaginatedEndpoints(int pageNumber, int pageSize)
         {
-            if (pageNumber < 1 || pageSize < 1)
+            try
             {
-                return BadRequest("Invalid page number or page size.");
+                if (pageNumber < 1 || pageSize < 1)
+                {
+                    return BadRequest("Invalid page number or page size.");
+                }
+
+                var (endpoints, totalCount) = await _endpointService.GetPaginatedEndpointsAsync(pageNumber, pageSize);
+                var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+
+                var result = new
+                {
+                    Endpoints = endpoints,
+                    TotalCount = totalCount,
+                    CurrentPage = pageNumber,
+                    PageSize = pageSize,
+                    TotalPages = totalPages
+                };
+
+                return Ok(result);
             }
-
-            var (endpoints, totalCount) = await _endpointService.GetPaginatedEndpointsAsync(pageNumber, pageSize);
-            var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
-
-            var result = new
+            catch (ServiceException ex)
             {
-                Endpoints = endpoints,
-                TotalCount = totalCount,
-                CurrentPage = pageNumber,
-                PageSize = pageSize,
-                TotalPages = totalPages
-            };
-
-            return Ok(result);
-
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpPost]
         public async Task<ActionResult<WEndpoint>> CreateEndpoint(WEndpoint endpoint)
         {
-            var createdEndpoint = await _endpointService.CreateEndpointAsync(endpoint);
-            return CreatedAtAction(nameof(GetEndpoint), new { id = createdEndpoint.EndpointID }, createdEndpoint);
+            try
+            {
+                var createdEndpoint = await _endpointService.CreateEndpointAsync(endpoint);
+                return CreatedAtAction(nameof(GetEndpoint), new { id = createdEndpoint.EndpointID }, createdEndpoint);
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateEndpoint(int id, WEndpoint endpoint)
         {
-            if (id != endpoint.EndpointID)
+            try
             {
-                return BadRequest();
+                if (id != endpoint.EndpointID)
+                {
+                    return BadRequest("Endpoint ID mismatch.");
+                }
+                await _endpointService.UpdateEndpointAsync(endpoint);
+                return NoContent();
             }
-            await _endpointService.UpdateEndpointAsync(endpoint);
-            return NoContent();
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEndpoint(int id)
         {
-            await _endpointService.DeleteEndpointAsync(id);
-            return NoContent();
+            try
+            {
+                await _endpointService.DeleteEndpointAsync(id);
+                return NoContent();
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (ServiceException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
         }
     }
 }

@@ -6,20 +6,23 @@ using MeterChangeApi.Services;
 using MeterChangeApi.Repositories;
 using MeterChangeApi.Services.Interfaces;
 using MeterChangeApi.Repositories.Interfaces;
-using MeterChangeAPI.Repositories.Interfaces;
-using MeterChangeAPI.Repositories;
-using MeterChangeAPI.Services.Interfaces;
-using MeterChangeAPI.Services;
+using MeterChangeApi.Data.Logger;
+using MeterChangeApi.Middleware.ExceptionHandling;
+using MeterChangeApi.Filters;
+using MeterChangeApi.Repositories.Helpers;
+using MeterChangeApi.Services.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Logging.AddProvider(new FileLoggerProvider("logs/MeterChangeApi.txt"));
+
 var connectionString = builder.Configuration["MySqlConnection"];
 
-// Add services to the container.
 if (connectionString != null)
 {
     builder.Services.AddDbContext<ChangeOutContext>(options =>
-    options.UseMySQL(connectionString.ToString()));
+    options.UseMySQL(connectionString.ToString()).LogTo(Console.WriteLine, LogLevel.Warning));
+
 }
 else
 {
@@ -28,11 +31,18 @@ else
 ;
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<ApiExceptionFilter>();
+});
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+
+builder.Services.AddScoped<IDatabaseOperationHandler, DatabaseOperationHandler>();
+builder.Services.AddScoped<IServiceOperationHandler, ServiceOperationHandler>();
 
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 builder.Services.AddScoped<IArcGISDataRepository, ArcGISDataRepository>();
@@ -43,16 +53,24 @@ builder.Services.AddScoped<IArcGISDataService, ArcGISDataService>();
 builder.Services.AddScoped<IMeterService, MeterService>();
 builder.Services.AddScoped<IEndpointService, EndpointService>();
 
+builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<AppLogger>>());
+builder.Services.AddScoped<IAppLogger, AppLogger>();
 var app = builder.Build();
+
+var logger = app.Services.GetRequiredService<ILogger<Program>>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
 }
 
-app.UseHttpsRedirection();
+logger.LogInformation("Server started at: {time}", DateTime.UtcNow);
+
+// app.UseHttpsRedirection();
+app.UseExceptionHandling();
 app.UseAuthorization();
 
 app.MapControllers();

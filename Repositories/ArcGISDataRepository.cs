@@ -1,67 +1,91 @@
 using MeterChangeApi.Data;
+using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Models;
- using MeterChangeAPI.Repositories.Interfaces;
+using MeterChangeApi.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace MeterChangeAPI.Repositories
+namespace MeterChangeApi.Repositories
 {
     public class ArcGISDataRepository : IArcGISDataRepository
     {
         private readonly ChangeOutContext _context;
+        private readonly IDatabaseOperationHandler _dbOperationHandler;
 
-        public ArcGISDataRepository(ChangeOutContext context)
+        public ArcGISDataRepository(ChangeOutContext context, IDatabaseOperationHandler dbOperationHandler)
         {
             _context = context;
+            _dbOperationHandler = dbOperationHandler;
         }
 
         public async Task<ArcGISData> AddAsync(ArcGISData arcGISData)
         {
-            _context.ArcGISData.Add(arcGISData);;
-            await _context.SaveChangesAsync();
-            return arcGISData;
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
+            {
+                _context.ArcGISData.Add(arcGISData);
+                await _context.SaveChangesAsync();
+                return arcGISData;
+            }, "Error adding ArcGIS data.");
         }
 
         public async Task DeleteAsync(int id)
         {
-            var arcGISData = await _context.ArcGISData.FindAsync(id);
-            if (arcGISData != null)
+            await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-                _context.ArcGISData.Remove(arcGISData);
-                await _context.SaveChangesAsync();
-            }
+                var arcGISData = await _context.ArcGISData.FindAsync(id);
+                if (arcGISData != null)
+                {
+                    _context.ArcGISData.Remove(arcGISData);
+                    await _context.SaveChangesAsync();
+                }
+            }, $"Error deleting ArcGIS data with ID {id}.");
         }
 
         public async Task<IEnumerable<ArcGISData>> GetAllAsync()
         {
-            return await _context.ArcGISData
-            .Include(a => a.WEndpoint)
-            .ToListAsync();
-        }
-
-        public async Task<ArcGISData?> GetByIdAsync(int id)
-        {
-            return await _context.ArcGISData
-            .Include(a => a.WEndpoint)
-            .FirstOrDefaultAsync(a => a.ArcGISDataID == id);
-        }
-
-        public async Task<(List<ArcGISData>, int)> GetPaginatedArcGISDataAsync(int pageNumber, int pageSize)        
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-            var offset = (pageNumber - 1) * pageSize;
+                return await _context.ArcGISData
+                    .Include(a => a.WEndpoint)
+                    .ToListAsync();
+            }, "Error retrieving all ArcGIS data.");
+        }
 
-            var arcGISDatas = await _context.ArcGISData
-            .Skip(offset)
-            .Take(pageSize)
-            .ToListAsync();
+        public async Task<ArcGISData> GetByIdAsync(int id)
+        {
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
+            {
+                var arcGISData = await _context.ArcGISData
+                .Include(a => a.WEndpoint)
+                .FirstOrDefaultAsync(a => a.ArcGISDataID == id)
+                ?? throw new NotFoundException($"ArcGISData with ID {id} not found.");
 
-            var totalCount = await _context.ArcGISData.CountAsync();
-            return (arcGISDatas, totalCount);
+                return arcGISData;
+            }, $"Error retrieving ArcGISData with ID {id}.");
+        }
+
+        public async Task<(List<ArcGISData>, int)> GetPaginatedArcGISDataAsync(int pageNumber, int pageSize)
+        {
+            return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
+            {
+                var offset = (pageNumber - 1) * pageSize;
+
+                var arcGISDatas = await _context.ArcGISData
+                    .Skip(offset)
+                    .Take(pageSize)
+                    .ToListAsync();
+
+                var totalCount = await _context.ArcGISData.CountAsync();
+                return (arcGISDatas, totalCount);
+            }, $"Error retrieving paginated ArcGIS data (page:{pageNumber}, pageSize:{pageSize}).");
         }
 
         public async Task UpdateAsync(ArcGISData arcGISData)
         {
-            _context.Entry(arcGISData).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
+            {
+                _context.Entry(arcGISData).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+            }, $"Error updating ArcGIS data with ID {arcGISData.ArcGISDataID}.");
         }
     }
 }

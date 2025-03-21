@@ -21,10 +21,7 @@ namespace MeterChangeApi.Models
 
         [ForeignKey("AddressID")]
         public virtual Address? Address { get; set; }
-
-        public int? EndpointID { get; set; }
-
-        [ForeignKey("EndpointID")]
+        
         public virtual WEndpoint? WEndpoint { get; set; }
 
     }

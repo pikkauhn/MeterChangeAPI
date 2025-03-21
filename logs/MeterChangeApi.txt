@@ -1,0 +1,47 @@
+3/21/2025 11:12:24 AM [Information] Server started at: 03/21/2025 16:12:24
+3/21/2025 11:12:25 AM [Information] Now listening on: http://localhost:5055
+3/21/2025 11:12:25 AM [Information] Application started. Press Ctrl+C to shut down.
+3/21/2025 11:12:25 AM [Information] Hosting environment: Development
+3/21/2025 11:12:25 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+3/21/2025 11:12:42 AM [Information] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+WHERE `a`.`AddressID` = @__p_0
+LIMIT 1
+3/21/2025 11:12:42 AM [Warning] Address with ID 1 not found.
+3/21/2025 11:12:42 AM [Error] Error getting address by ID: 1.
+System.Collections.Generic.KeyNotFoundException: Address with ID 1 not found.
+   at MeterChangeApi.Services.AddressService.GetAddressByIdAsync(Int32 id) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Services\AddressService.cs:line 65
+3/21/2025 11:21:36 AM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+3/21/2025 11:21:36 AM [Information] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+3/21/2025 11:22:31 AM [Information] Application is shutting down...
+3/21/2025 12:35:47 PM [Information] Server started at: 03/21/2025 17:35:47
+3/21/2025 12:35:47 PM [Information] Now listening on: http://localhost:5055
+3/21/2025 12:35:47 PM [Information] Application started. Press Ctrl+C to shut down.
+3/21/2025 12:35:47 PM [Information] Hosting environment: Development
+3/21/2025 12:35:47 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/21/2025 12:35:57 PM [Information] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+3/21/2025 12:35:57 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+3/21/2025 12:36:07 PM [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+WHERE `a`.`AddressID` = @__id_0
+LIMIT 1
+3/21/2025 12:36:13 PM [Information] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+WHERE `a`.`AddressID` = @__id_0
+LIMIT 1
+3/21/2025 12:56:56 PM [Information] Application is shutting down...
