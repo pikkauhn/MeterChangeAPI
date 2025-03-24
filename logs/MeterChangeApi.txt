@@ -1,0 +1,86 @@
+3/24/2025 11:31:22 AM [Information] Server started at: 03/24/2025 16:31:22
+3/24/2025 11:31:22 AM [Information] Now listening on: http://localhost:5055
+3/24/2025 11:31:22 AM [Information] Application started. Press Ctrl+C to shut down.
+3/24/2025 11:31:22 AM [Information] Hosting environment: Development
+3/24/2025 11:31:22 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/24/2025 12:21:00 PM [Information] Executed DbCommand (10ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+3/24/2025 12:21:00 PM [Information] Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+3/24/2025 12:21:42 PM [Information] Executed DbCommand (65ms) [Parameters=[p0='?' (DbType = Double), p1='?' (DbType = Double), p2='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+SELECT *
+        FROM Addresses
+        WHERE ST_Distance(POINT(Addresses.Location_Longitude, Addresses.Location_Latitude), POINT(@p0, @p1)) <= @p2
+3/24/2025 2:14:32 PM [Information] Application is shutting down...
+3/24/2025 2:22:02 PM [Information] Server started at: 03/24/2025 19:22:02
+3/24/2025 2:22:03 PM [Information] Now listening on: http://localhost:5055
+3/24/2025 2:22:03 PM [Information] Application started. Press Ctrl+C to shut down.
+3/24/2025 2:22:03 PM [Information] Hosting environment: Development
+3/24/2025 2:22:03 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/24/2025 2:22:25 PM [Error] Coordinates (x=30, y=20) are outside the county's range.
+3/24/2025 2:23:01 PM [Error] Coordinates (x=1391167.542, y=334348.2172) are outside the county's range.
+3/24/2025 2:23:20 PM [Error] Coordinates (x=1391167.542, y=334348.2172) are outside the county's range.
+3/24/2025 4:17:36 PM [Information] Server started at: 03/24/2025 21:17:36
+3/24/2025 4:17:36 PM [Information] Now listening on: http://localhost:5055
+3/24/2025 4:17:36 PM [Information] Application started. Press Ctrl+C to shut down.
+3/24/2025 4:17:36 PM [Information] Hosting environment: Development
+3/24/2025 4:17:36 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/24/2025 4:18:12 PM [Error] Coordinates (x=1391167.542, y=334348.2172) are outside the county's range.
+3/24/2025 4:20:15 PM [Error] Coordinates (x=334348.2172, y=1391167.542) are outside the county's range.
+3/24/2025 4:21:00 PM [Information] Server started at: 03/24/2025 21:21:00
+3/24/2025 4:21:01 PM [Information] Now listening on: http://localhost:5055
+3/24/2025 4:21:01 PM [Information] Application started. Press Ctrl+C to shut down.
+3/24/2025 4:21:01 PM [Information] Hosting environment: Development
+3/24/2025 4:21:01 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/24/2025 4:22:06 PM [Error] Coordinates (x=334348.2172, y=1391167.542) are outside the county's range.
+3/24/2025 4:23:45 PM [Information] Server started at: 03/24/2025 21:23:45
+3/24/2025 4:23:45 PM [Information] Now listening on: http://localhost:5055
+3/24/2025 4:23:45 PM [Information] Application started. Press Ctrl+C to shut down.
+3/24/2025 4:23:45 PM [Information] Hosting environment: Development
+3/24/2025 4:23:45 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/24/2025 4:36:49 PM [Information] Server started at: 03/24/2025 21:36:49
+3/24/2025 4:36:49 PM [Information] Now listening on: http://localhost:5055
+3/24/2025 4:36:49 PM [Information] Application started. Press Ctrl+C to shut down.
+3/24/2025 4:36:49 PM [Information] Hosting environment: Development
+3/24/2025 4:36:49 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/24/2025 4:37:14 PM [Error] Coordinates (x=334348.2172, y=1391167.542) are outside the county's range.
+3/24/2025 4:44:40 PM [Information] Server started at: 03/24/2025 21:44:40
+3/24/2025 4:44:40 PM [Information] Now listening on: http://localhost:5055
+3/24/2025 4:44:40 PM [Information] Application started. Press Ctrl+C to shut down.
+3/24/2025 4:44:40 PM [Information] Hosting environment: Development
+3/24/2025 4:44:40 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/24/2025 4:45:37 PM [Information] Server started at: 03/24/2025 21:45:37
+3/24/2025 4:45:37 PM [Information] Now listening on: http://localhost:5055
+3/24/2025 4:45:37 PM [Information] Application started. Press Ctrl+C to shut down.
+3/24/2025 4:45:37 PM [Information] Hosting environment: Development
+3/24/2025 4:45:37 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/24/2025 4:46:01 PM [Information] Executed DbCommand (65ms) [Parameters=[p0='?' (DbType = Double), p1='?' (DbType = Double), p2='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+SELECT *
+        FROM Addresses
+        WHERE ST_Distance(POINT(Addresses.Location_Longitude, Addresses.Location_Latitude), POINT(@p0, @p1)) <= @p2
+3/24/2025 4:47:18 PM [Information] Server started at: 03/24/2025 21:47:18
+3/24/2025 4:47:18 PM [Information] Now listening on: http://localhost:5055
+3/24/2025 4:47:18 PM [Information] Application started. Press Ctrl+C to shut down.
+3/24/2025 4:47:18 PM [Information] Hosting environment: Development
+3/24/2025 4:47:18 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/24/2025 4:47:36 PM [Information] Executed DbCommand (64ms) [Parameters=[p0='?' (DbType = Double), p1='?' (DbType = Double), p2='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+SELECT *
+        FROM Addresses
+        WHERE ST_Distance(POINT(Addresses.Location_Longitude, Addresses.Location_Latitude), POINT(@p0, @p1)) <= @p2
+3/24/2025 4:47:53 PM [Information] Executed DbCommand (85ms) [Parameters=[p0='?' (DbType = Double), p1='?' (DbType = Double), p2='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+SELECT *
+        FROM Addresses
+        WHERE ST_Distance(POINT(Addresses.Location_Longitude, Addresses.Location_Latitude), POINT(@p0, @p1)) <= @p2
+3/24/2025 4:49:50 PM [Information] Executed DbCommand (90ms) [Parameters=[p0='?' (DbType = Double), p1='?' (DbType = Double), p2='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+SELECT *
+        FROM Addresses
+        WHERE ST_Distance(POINT(Addresses.Location_Longitude, Addresses.Location_Latitude), POINT(@p0, @p1)) <= @p2
+3/24/2025 4:49:58 PM [Information] Executed DbCommand (75ms) [Parameters=[p0='?' (DbType = Double), p1='?' (DbType = Double), p2='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+SELECT *
+        FROM Addresses
+        WHERE ST_Distance(POINT(Addresses.Location_Longitude, Addresses.Location_Latitude), POINT(@p0, @p1)) <= @p2
+3/24/2025 4:50:33 PM [Information] Application is shutting down...

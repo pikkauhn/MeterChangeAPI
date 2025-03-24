@@ -4,6 +4,7 @@ using MeterChangeApi.Models;
 using MeterChangeApi.Services.Interfaces;
 using MeterChangeApi.Repositories.Interfaces;
 using MeterChangeApi.Middleware.ExceptionHandling;
+using MeterChangeApi.Data.Config;
 
 namespace MeterChangeApi.Services
 {
@@ -80,10 +81,17 @@ namespace MeterChangeApi.Services
 
         public async Task<IEnumerable<Address>> GetAddressesByRangeAsync(double x, double y, double distanceInFeet)
         {
+
             if (distanceInFeet <= 0)
             {
                 _logger.LogError("Invalid distanceInFeet: must be greater than zero.");
                 throw new InvalidInputException("Invalid distanceInFeet");
+            }
+
+            if (x < CountyCoordinates.MinX || x > CountyCoordinates.MaxX || y < CountyCoordinates.MinY || y > CountyCoordinates.MaxY)
+            {
+                _logger.LogError($"Coordinates (x={x}, y={y}) are outside the county's range.");
+                throw new InvalidInputException("Coordinates are outside the county's range.");
             }
 
             return await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
@@ -97,7 +105,7 @@ namespace MeterChangeApi.Services
             if (string.IsNullOrEmpty(street))
             {
                 _logger.LogError("Invalid street: null or empty.");
-                throw new InvalidInputException("Invalid street"); // Throw custom exception
+                throw new InvalidInputException("Invalid street");
             }
 
             return await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
