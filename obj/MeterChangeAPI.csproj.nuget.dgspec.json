@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeAPI.csproj": {}
+    "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeAPI.csproj": {
+    "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeAPI.csproj",
-        "projectName": "MeterChangeAPI",
-        "projectPath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeApi.csproj",
+        "projectName": "MeterChangeApi",
+        "projectPath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeApi.csproj",
         "packagesPath": "C:\\Users\\ZBurns\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\obj\\",
         "projectStyle": "PackageReference",
