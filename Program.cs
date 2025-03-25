@@ -11,6 +11,10 @@ using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Filters;
 using MeterChangeApi.Repositories.Helpers;
 using MeterChangeApi.Services.Helpers;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,6 +59,35 @@ builder.Services.AddScoped<IEndpointService, EndpointService>();
 
 builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<AppLogger>>());
 builder.Services.AddScoped<IAppLogger, AppLogger>();
+
+// Add JWT Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = GetJwtSecurityKey(builder.Configuration)
+        };
+    });
+
+// Get the Jwt Security Key
+static SymmetricSecurityKey GetJwtSecurityKey(IConfiguration configuration)
+{
+    var jwtKey = configuration["Jwt:Key"];
+    if (string.IsNullOrEmpty(jwtKey))
+    {
+        throw new InvalidOperationException("JWT Key is missing or invalid in configuration.");
+    }
+    return new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
+}
+
+
 var app = builder.Build();
 
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
@@ -73,8 +106,9 @@ logger.LogInformation("Server started at: {time}", DateTime.UtcNow);
 app.UseExceptionHandling();
 app.UseAuthorization();
 
+app.UseMiddleware<JwtMiddleware>();
+
 app.MapControllers();
 
-// app.UseMiddleware<ApiKeyMiddleware>();
 
 app.Run();

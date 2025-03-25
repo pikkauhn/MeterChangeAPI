@@ -1,6 +1,3 @@
 @MeterChangeApi_HostAddress = http://localhost:5055
 
-GET {{MeterChangeApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
 ###

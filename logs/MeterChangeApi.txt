@@ -1,0 +1,48 @@
+3/25/2025 12:40:36 PM [Information] Server started at: 03/25/2025 17:40:36
+3/25/2025 12:40:36 PM [Information] Now listening on: http://localhost:5055
+3/25/2025 12:40:36 PM [Information] Application started. Press Ctrl+C to shut down.
+3/25/2025 12:40:36 PM [Information] Hosting environment: Development
+3/25/2025 12:40:36 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/25/2025 12:40:48 PM [Information] Executed DbCommand (11ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+3/25/2025 12:40:48 PM [Information] Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+3/25/2025 4:44:02 PM [Information] Server started at: 03/25/2025 21:44:02
+3/25/2025 4:44:03 PM [Information] Now listening on: http://localhost:5055
+3/25/2025 4:44:03 PM [Information] Application started. Press Ctrl+C to shut down.
+3/25/2025 4:44:03 PM [Information] Hosting environment: Development
+3/25/2025 4:44:03 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/25/2025 4:44:04 PM [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT Key is missing or invalid in configuration.
+   at Program.<<Main>$>g__GetJwtSecurityKey|0_4(IConfiguration configuration) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Program.cs:line 85
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Program.cs:line 67
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+3/25/2025 4:44:04 PM [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: JWT Key is missing or invalid in configuration.
+   at Program.<<Main>$>g__GetJwtSecurityKey|0_4(IConfiguration configuration) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Program.cs:line 85
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Program.cs:line 67
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)

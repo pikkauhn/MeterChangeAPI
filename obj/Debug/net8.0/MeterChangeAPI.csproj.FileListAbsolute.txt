@@ -133,3 +133,12 @@ C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\bin\Debug\net8.0\runtimes\win-x6
 C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\obj\Debug\net8.0\MeterChangeApi.sourcelink.json
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
