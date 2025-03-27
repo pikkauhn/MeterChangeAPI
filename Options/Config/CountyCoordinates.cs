@@ -1,4 +1,4 @@
-namespace MeterChangeApi.Data.Config
+namespace MeterChangeApi.Options.Config
 {
     public class CountyCoordinates
     {

@@ -46,3 +46,94 @@ System.InvalidOperationException: JWT Key is missing or invalid in configuration
    at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+3/27/2025 9:30:56 AM [Information] Server started at: 03/27/2025 14:30:56
+3/27/2025 9:30:56 AM [Information] Now listening on: http://localhost:5055
+3/27/2025 9:30:56 AM [Information] Application started. Press Ctrl+C to shut down.
+3/27/2025 9:30:56 AM [Information] Hosting environment: Development
+3/27/2025 9:30:56 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 10:05:25 AM [Information] Application is shutting down...
+3/27/2025 10:06:47 AM [Information] Server started at: 03/27/2025 15:06:47
+3/27/2025 10:06:47 AM [Information] Now listening on: http://localhost:5055
+3/27/2025 10:06:47 AM [Information] Application started. Press Ctrl+C to shut down.
+3/27/2025 10:06:47 AM [Information] Hosting environment: Development
+3/27/2025 10:06:47 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:14:04 PM [Information] Server started at: 03/27/2025 21:14:04
+3/27/2025 4:14:04 PM [Information] Now listening on: http://localhost:5055
+3/27/2025 4:14:04 PM [Information] Application started. Press Ctrl+C to shut down.
+3/27/2025 4:14:04 PM [Information] Hosting environment: Development
+3/27/2025 4:14:04 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:14:47 PM [Error] An unexpected error occurred during JWT validation.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX12741: JWT must have three segments (JWS) or five segments (JWE).
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MeterChangeApi.Security.Middleware.JwtMiddleware.Invoke(HttpContext context) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Middleware\Security\JwtMiddleware.cs:line 52
+3/27/2025 4:17:06 PM [Information] Server started at: 03/27/2025 21:17:06
+3/27/2025 4:17:06 PM [Information] Now listening on: http://localhost:5055
+3/27/2025 4:17:06 PM [Information] Application started. Press Ctrl+C to shut down.
+3/27/2025 4:17:06 PM [Information] Hosting environment: Development
+3/27/2025 4:17:06 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:20:52 PM [Information] Server started at: 03/27/2025 21:20:52
+3/27/2025 4:20:52 PM [Information] Now listening on: http://localhost:5055
+3/27/2025 4:20:52 PM [Information] Application started. Press Ctrl+C to shut down.
+3/27/2025 4:20:52 PM [Information] Hosting environment: Development
+3/27/2025 4:20:52 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:22:07 PM [Error] Unhandled Exception
+System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'HS256' requires a key size of at least '128' bits. Key 'Null', is of size: '72'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at MeterChangeAPI.Controllers.AuthController.GenerateToken(String username, String password)
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+3/27/2025 4:26:11 PM [Information] Server started at: 03/27/2025 21:26:11
+3/27/2025 4:26:11 PM [Information] Now listening on: http://localhost:5055
+3/27/2025 4:26:11 PM [Information] Application started. Press Ctrl+C to shut down.
+3/27/2025 4:26:11 PM [Information] Hosting environment: Development
+3/27/2025 4:26:11 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:26:30 PM [Error] Unhandled Exception
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '232' bits. (Parameter 'keyBytes')
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at MeterChangeAPI.Controllers.AuthController.GenerateToken(String username, String password) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Controllers\AuthController.cs:line 43
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+3/27/2025 4:29:14 PM [Information] Server started at: 03/27/2025 21:29:14
+3/27/2025 4:29:14 PM [Information] Now listening on: http://localhost:5055
+3/27/2025 4:29:14 PM [Information] Application started. Press Ctrl+C to shut down.
+3/27/2025 4:29:14 PM [Information] Hosting environment: Development
+3/27/2025 4:29:14 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:30:05 PM [Information] Executed DbCommand (12ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+3/27/2025 4:30:05 PM [Information] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`

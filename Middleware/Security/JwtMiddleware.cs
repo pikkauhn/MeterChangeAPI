@@ -26,6 +26,11 @@ namespace MeterChangeApi.Security.Middleware
         {
             try
             {
+                if (context.Request.Path.StartsWithSegments("/api/Auth/generate-token"))
+                {
+                    await _next(context);
+                    return;
+                }
                 if (context.Request.Headers.TryGetValue("Authorization", out var authorizationHeader))
                 {
                     var token = authorizationHeader.ToString().Replace("Bearer ", "");

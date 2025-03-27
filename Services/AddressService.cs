@@ -4,7 +4,7 @@ using MeterChangeApi.Models;
 using MeterChangeApi.Services.Interfaces;
 using MeterChangeApi.Repositories.Interfaces;
 using MeterChangeApi.Middleware.ExceptionHandling;
-using MeterChangeApi.Data.Config;
+using MeterChangeApi.Options.Config;
 
 namespace MeterChangeApi.Services
 {

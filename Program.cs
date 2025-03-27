@@ -2,6 +2,7 @@ using MeterChangeApi.Security.Middleware;
 using Microsoft.EntityFrameworkCore;
 
 using MeterChangeApi.Data;
+using MeterChangeApi.Options;
 using MeterChangeApi.Services;
 using MeterChangeApi.Repositories;
 using MeterChangeApi.Services.Interfaces;
@@ -11,10 +12,11 @@ using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Filters;
 using MeterChangeApi.Repositories.Helpers;
 using MeterChangeApi.Services.Helpers;
-using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.Extensions.Options;
+using MeterChangeApi.Options.Config;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,9 +33,15 @@ if (connectionString != null)
 else
 {
     Console.WriteLine("No Connection String Found.");
-}
-;
+};
 
+builder.Services.Configure<DevelopmentOptions>(builder.Configuration.GetSection("Development"));
+var devOptions = builder.Services.BuildServiceProvider().GetRequiredService<IOptions<DevelopmentOptions>>().Value;
+
+if (devOptions.EnableSwagger)
+{
+    builder.Services.ConfigureSwagger(devOptions.Swagger);
+}
 
 builder.Services.AddControllers(options =>
 {
@@ -93,11 +101,10 @@ var app = builder.Build();
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() && devOptions.EnableSwagger)
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-
 }
 
 logger.LogInformation("Server started at: {time}", DateTime.UtcNow);
