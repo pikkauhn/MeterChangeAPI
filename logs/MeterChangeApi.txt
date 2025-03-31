@@ -2,7 +2,7 @@
 3/25/2025 12:40:36 PM [Information] Now listening on: http://localhost:5055
 3/25/2025 12:40:36 PM [Information] Application started. Press Ctrl+C to shut down.
 3/25/2025 12:40:36 PM [Information] Hosting environment: Development
-3/25/2025 12:40:36 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/25/2025 12:40:36 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/25/2025 12:40:48 PM [Information] Executed DbCommand (11ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
 FROM `Addresses` AS `a`
@@ -15,11 +15,11 @@ FROM `Addresses` AS `a`
 3/25/2025 4:44:03 PM [Information] Now listening on: http://localhost:5055
 3/25/2025 4:44:03 PM [Information] Application started. Press Ctrl+C to shut down.
 3/25/2025 4:44:03 PM [Information] Hosting environment: Development
-3/25/2025 4:44:03 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/25/2025 4:44:03 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/25/2025 4:44:04 PM [Error] An unhandled exception has occurred while executing the request.
 System.InvalidOperationException: JWT Key is missing or invalid in configuration.
-   at Program.<<Main>$>g__GetJwtSecurityKey|0_4(IConfiguration configuration) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Program.cs:line 85
-   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Program.cs:line 67
+   at Program.<<Main>$>g__GetJwtSecurityKey|0_4(IConfiguration configuration) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Program.cs:line 85
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Program.cs:line 67
    at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
    at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
    at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
@@ -33,8 +33,8 @@ System.InvalidOperationException: JWT Key is missing or invalid in configuration
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
 3/25/2025 4:44:04 PM [Error] An unhandled exception has occurred while executing the request.
 System.InvalidOperationException: JWT Key is missing or invalid in configuration.
-   at Program.<<Main>$>g__GetJwtSecurityKey|0_4(IConfiguration configuration) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Program.cs:line 85
-   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Program.cs:line 67
+   at Program.<<Main>$>g__GetJwtSecurityKey|0_4(IConfiguration configuration) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Program.cs:line 85
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__3(JwtBearerOptions options) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Program.cs:line 67
    at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
    at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
 --- End of stack trace from previous location ---
@@ -50,32 +50,32 @@ System.InvalidOperationException: JWT Key is missing or invalid in configuration
 3/27/2025 9:30:56 AM [Information] Now listening on: http://localhost:5055
 3/27/2025 9:30:56 AM [Information] Application started. Press Ctrl+C to shut down.
 3/27/2025 9:30:56 AM [Information] Hosting environment: Development
-3/27/2025 9:30:56 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 9:30:56 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/27/2025 10:05:25 AM [Information] Application is shutting down...
 3/27/2025 10:06:47 AM [Information] Server started at: 03/27/2025 15:06:47
 3/27/2025 10:06:47 AM [Information] Now listening on: http://localhost:5055
 3/27/2025 10:06:47 AM [Information] Application started. Press Ctrl+C to shut down.
 3/27/2025 10:06:47 AM [Information] Hosting environment: Development
-3/27/2025 10:06:47 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 10:06:47 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/27/2025 4:14:04 PM [Information] Server started at: 03/27/2025 21:14:04
 3/27/2025 4:14:04 PM [Information] Now listening on: http://localhost:5055
 3/27/2025 4:14:04 PM [Information] Application started. Press Ctrl+C to shut down.
 3/27/2025 4:14:04 PM [Information] Hosting environment: Development
-3/27/2025 4:14:04 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:14:04 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/27/2025 4:14:47 PM [Error] An unexpected error occurred during JWT validation.
 Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX12741: JWT must have three segments (JWS) or five segments (JWE).
    at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
-   at MeterChangeApi.Security.Middleware.JwtMiddleware.Invoke(HttpContext context) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Middleware\Security\JwtMiddleware.cs:line 52
+   at MeterChangeApi.Security.Middleware.JwtMiddleware.Invoke(HttpContext context) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Middleware\Security\JwtMiddleware.cs:line 52
 3/27/2025 4:17:06 PM [Information] Server started at: 03/27/2025 21:17:06
 3/27/2025 4:17:06 PM [Information] Now listening on: http://localhost:5055
 3/27/2025 4:17:06 PM [Information] Application started. Press Ctrl+C to shut down.
 3/27/2025 4:17:06 PM [Information] Hosting environment: Development
-3/27/2025 4:17:06 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:17:06 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/27/2025 4:20:52 PM [Information] Server started at: 03/27/2025 21:20:52
 3/27/2025 4:20:52 PM [Information] Now listening on: http://localhost:5055
 3/27/2025 4:20:52 PM [Information] Application started. Press Ctrl+C to shut down.
 3/27/2025 4:20:52 PM [Information] Hosting environment: Development
-3/27/2025 4:20:52 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:20:52 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/27/2025 4:22:07 PM [Error] Unhandled Exception
 System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'HS256' requires a key size of at least '128' bits. Key 'Null', is of size: '72'. (Parameter 'key')
    at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
@@ -84,7 +84,7 @@ System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'HS256' r
    at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
    at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
    at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
-   at MeterChangeAPI.Controllers.AuthController.GenerateToken(String username, String password)
+   at MeterChangeApi.Controllers.AuthController.GenerateToken(String username, String password)
    at lambda_method3(Closure, Object, Object[])
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
@@ -100,7 +100,7 @@ System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'HS256' r
 3/27/2025 4:26:11 PM [Information] Now listening on: http://localhost:5055
 3/27/2025 4:26:11 PM [Information] Application started. Press Ctrl+C to shut down.
 3/27/2025 4:26:11 PM [Information] Hosting environment: Development
-3/27/2025 4:26:11 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:26:11 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/27/2025 4:26:30 PM [Error] Unhandled Exception
 System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '232' bits. (Parameter 'keyBytes')
    at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
@@ -112,7 +112,7 @@ System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorith
    at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
    at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
    at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
-   at MeterChangeAPI.Controllers.AuthController.GenerateToken(String username, String password) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Controllers\AuthController.cs:line 43
+   at MeterChangeApi.Controllers.AuthController.GenerateToken(String username, String password) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Controllers\AuthController.cs:line 43
    at lambda_method3(Closure, Object, Object[])
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
@@ -128,7 +128,7 @@ System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorith
 3/27/2025 4:29:14 PM [Information] Now listening on: http://localhost:5055
 3/27/2025 4:29:14 PM [Information] Application started. Press Ctrl+C to shut down.
 3/27/2025 4:29:14 PM [Information] Hosting environment: Development
-3/27/2025 4:29:14 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/27/2025 4:29:14 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/27/2025 4:30:05 PM [Information] Executed DbCommand (12ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
 FROM `Addresses` AS `a`
@@ -137,3 +137,21 @@ LIMIT @__p_1 OFFSET @__p_0
 3/27/2025 4:30:05 PM [Information] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT COUNT(*)
 FROM `Addresses` AS `a`
+3/27/2025 4:39:49 PM [Information] Server started at: 03/27/2025 21:39:49
+3/27/2025 4:39:50 PM [Information] Now listening on: http://localhost:5055
+3/27/2025 4:39:50 PM [Information] Application started. Press Ctrl+C to shut down.
+3/27/2025 4:39:50 PM [Information] Hosting environment: Development
+3/27/2025 4:39:50 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+3/27/2025 4:40:50 PM [Information] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+3/27/2025 4:40:50 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+3/27/2025 4:41:24 PM [Error] An unexpected error occurred during JWT validation.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX12741: JWT must have three segments (JWS) or five segments (JWE).
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MeterChangeApi.Security.Middleware.JwtMiddleware.Invoke(HttpContext context) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Middleware\Security\JwtMiddleware.cs:line 57
+3/27/2025 4:46:56 PM [Information] Application is shutting down...

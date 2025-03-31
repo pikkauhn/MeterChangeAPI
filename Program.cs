@@ -68,7 +68,6 @@ builder.Services.AddScoped<IEndpointService, EndpointService>();
 builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<AppLogger>>());
 builder.Services.AddScoped<IAppLogger, AppLogger>();
 
-// Add JWT Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -84,7 +83,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// Get the Jwt Security Key
 static SymmetricSecurityKey GetJwtSecurityKey(IConfiguration configuration)
 {
     var jwtKey = configuration["Jwt:Key"];
@@ -100,7 +98,6 @@ var app = builder.Build();
 
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment() && devOptions.EnableSwagger)
 {
     app.UseSwagger();

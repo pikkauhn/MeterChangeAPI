@@ -18,5 +18,5 @@ namespace MeterChangeApi.Options
         public bool EnableAuthorization { get; set; } = true;
         public string Title { get; set; } = "MeterChangeApi";
         public string Version { get; set; } = "v1";
-    }
+    }    
 }
