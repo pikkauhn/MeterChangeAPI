@@ -155,3 +155,576 @@ Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX12741: JWT mu
    at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
    at MeterChangeApi.Security.Middleware.JwtMiddleware.Invoke(HttpContext context) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Middleware\Security\JwtMiddleware.cs:line 57
 3/27/2025 4:46:56 PM [Information] Application is shutting down...
+3/31/2025 11:34:41 AM [Information] Server started at: 03/31/2025 16:34:41
+3/31/2025 11:34:41 AM [Information] Now listening on: http://localhost:5055
+3/31/2025 11:34:41 AM [Information] Application started. Press Ctrl+C to shut down.
+3/31/2025 11:34:41 AM [Information] Hosting environment: Development
+3/31/2025 11:34:41 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/31/2025 12:26:59 PM [Information] Application is shutting down...
+3/31/2025 12:27:08 PM [Information] Server started at: 03/31/2025 17:27:08
+3/31/2025 12:27:08 PM [Information] Now listening on: http://localhost:5055
+3/31/2025 12:27:08 PM [Information] Application started. Press Ctrl+C to shut down.
+3/31/2025 12:27:08 PM [Information] Hosting environment: Development
+3/31/2025 12:27:08 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/31/2025 12:27:18 PM [Information] Application is shutting down...
+3/31/2025 3:52:08 PM [Information] Server started at: 03/31/2025 20:52:08
+3/31/2025 3:52:08 PM [Information] Now listening on: http://localhost:5055
+3/31/2025 3:52:08 PM [Information] Application started. Press Ctrl+C to shut down.
+3/31/2025 3:52:08 PM [Information] Hosting environment: Development
+3/31/2025 3:52:08 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/2/2025 12:39:24 PM [Information] Server started at: 04/02/2025 17:39:24
+4/2/2025 12:39:25 PM [Information] Now listening on: http://localhost:5055
+4/2/2025 12:39:25 PM [Information] Application started. Press Ctrl+C to shut down.
+4/2/2025 12:39:25 PM [Information] Hosting environment: Development
+4/2/2025 12:39:25 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/2/2025 12:53:02 PM [Information] Server started at: 04/02/2025 17:53:02
+4/2/2025 12:53:02 PM [Information] Now listening on: http://localhost:5055
+4/2/2025 12:53:02 PM [Information] Application started. Press Ctrl+C to shut down.
+4/2/2025 12:53:02 PM [Information] Hosting environment: Development
+4/2/2025 12:53:02 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/2/2025 12:53:40 PM [Information] Executed DbCommand (11ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:40 PM [Information] Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:43 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/2/2025 12:53:43 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:45 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:45 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:47 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:47 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:48 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:48 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:49 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:49 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:49 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:49 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:51 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:51 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:51 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:51 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:51 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:51 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:52 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:52 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:52 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/2/2025 12:53:52 PM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 12:53:53 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 12:53:53 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 1:04:13 PM [Information] Application is shutting down...
+4/2/2025 1:51:08 PM [Information] Server started at: 04/02/2025 18:51:08
+4/2/2025 1:51:08 PM [Information] Now listening on: http://localhost:5055
+4/2/2025 1:51:08 PM [Information] Application started. Press Ctrl+C to shut down.
+4/2/2025 1:51:08 PM [Information] Hosting environment: Development
+4/2/2025 1:51:08 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/2/2025 2:16:49 PM [Information] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 2:16:49 PM [Information] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 2:16:51 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/2/2025 2:16:51 PM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 2:16:52 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 2:16:52 PM [Information] Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 2:19:38 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 2:19:38 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 2:19:49 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/2/2025 2:19:49 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 2:19:50 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 2:19:50 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 2:19:50 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 2:19:50 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 2:19:51 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 2:19:51 PM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 2:19:51 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 2:19:51 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 2:19:52 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/2/2025 2:19:52 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/2/2025 3:34:39 PM [Information] Application is shutting down...
+4/3/2025 8:58:13 AM [Information] Server started at: 04/03/2025 13:58:13
+4/3/2025 8:58:14 AM [Information] Now listening on: http://localhost:5055
+4/3/2025 8:58:14 AM [Information] Application started. Press Ctrl+C to shut down.
+4/3/2025 8:58:14 AM [Information] Hosting environment: Development
+4/3/2025 8:58:14 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/3/2025 8:58:57 AM [Information] Executed DbCommand (9ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 8:58:57 AM [Information] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 8:59:25 AM [Information] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/3/2025 8:59:25 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 8:59:25 AM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 8:59:25 AM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 8:59:26 AM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 8:59:26 AM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:37:40 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:37:40 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:37:42 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:37:42 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:37:44 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/3/2025 12:37:44 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:37:44 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:37:44 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:37:46 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:37:46 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:37:47 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/3/2025 12:37:47 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:37:47 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:37:47 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:42:30 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:42:30 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:43:08 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:43:08 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:43:57 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:43:57 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:48:57 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:48:57 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:49:03 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:49:03 PM [Information] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:49:06 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:49:06 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:49:10 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:49:10 PM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:49:16 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:49:16 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:49:20 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/3/2025 12:49:20 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:49:21 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:49:21 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:49:24 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:49:24 PM [Information] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:49:28 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:49:28 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:50:01 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:50:01 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:50:04 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:50:04 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:50:08 PM [Information] Application is shutting down...
+4/3/2025 12:50:34 PM [Information] Server started at: 04/03/2025 17:50:34
+4/3/2025 12:50:35 PM [Information] Now listening on: http://localhost:5055
+4/3/2025 12:50:35 PM [Information] Application started. Press Ctrl+C to shut down.
+4/3/2025 12:50:35 PM [Information] Hosting environment: Development
+4/3/2025 12:50:35 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/3/2025 12:53:23 PM [Information] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:53:23 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:53:31 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:53:31 PM [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:54:57 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:54:57 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:56:22 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:56:22 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 12:56:28 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 12:56:28 PM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 1:58:55 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 1:58:55 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 1:59:04 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 1:59:04 PM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:03:49 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:03:49 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:03:49 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:03:49 PM [Information] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:03:50 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:03:50 PM [Information] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:03:54 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:03:54 PM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:04:12 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:04:12 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:04:17 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:04:17 PM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:24:25 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:24:25 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:24:28 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/3/2025 2:24:28 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:24:29 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:24:29 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:25:31 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:25:31 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/3/2025 2:55:53 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/3/2025 2:55:53 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`

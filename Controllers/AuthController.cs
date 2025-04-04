@@ -1,3 +1,4 @@
+using MeterChangeAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -18,9 +19,9 @@ namespace MeterChangeApi.Controllers
         }
 
         [HttpPost("generate-token")]
-        public IActionResult GenerateToken(string username, string password)
+        public IActionResult GenerateToken([FromBody] LoginRequest request)
         {
-            if (username != "testuser" || password != "password")
+            if (request == null || request.Username != "testuser" || request.Password != "password")
             {
                 return Unauthorized("Invalid credentials.");
             }
@@ -35,7 +36,7 @@ namespace MeterChangeApi.Controllers
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, username),
+                new Claim(ClaimTypes.NameIdentifier, request.Username),
                 new Claim(ClaimTypes.Role, "User")
             };
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eKioxurrwZw=",
+  "dgSpecHash": "/VaW3hZVAAc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeApi.csproj",
+  "projectFilePath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZBurns\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\ZBurns\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
