@@ -26,7 +26,8 @@ namespace MeterChangeApi.Security.Middleware
         {
             try
             {
-                if (context.Request.Path.StartsWithSegments("/api/Auth/generate-token"))
+                if (context.Request.Path.StartsWithSegments("/api/Auth/generate-token") ||
+                    context.Request.Path.StartsWithSegments("/api/Auth/register"))
                 {
                     await _next(context);
                     return;

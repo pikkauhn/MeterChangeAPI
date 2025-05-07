@@ -8,7 +8,7 @@ namespace MeterChangeApi.Data
         public ChangeOutContext(DbContextOptions<ChangeOutContext> options) : base(options)
         {
         }
-
+        public DbSet<Users> Users { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Wmeter> meters { get; set; }
         public DbSet<Models.WEndpoint> endpoints { get; set; }

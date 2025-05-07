@@ -1,52 +1,62 @@
-using MeterChangeAPI.Models;
+using System.Text;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+
+using MeterChangeApi.Models;
+using MeterChangeApi.Services.Interfaces;
+using MeterChangeApi.Repositories.Interfaces;
 
 namespace MeterChangeApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthController : ControllerBase
+    public class AuthController(IConfiguration configuration, IUserService userService, ITokenService tokenService) : ControllerBase
     {
-        private readonly IConfiguration _configuration;
+        private readonly IConfiguration _configuration = configuration;
+        private readonly IUserService _userService = userService;
+        private readonly ITokenService _tokenService = tokenService;
 
-        public AuthController(IConfiguration configuration)
+        [HttpPost("register")]
+        public async Task<IActionResult> Register(string username, string password, string? email)
         {
-            _configuration = configuration;
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                return BadRequest("Username and password are required.");
+            }
+
+            var registrationResult = await _userService.RegisterUserAsync(username, password, email);
+
+            if (registrationResult)
+            {
+                return Ok("User registered successfully.");
+            }
+            else
+            {
+                return BadRequest("Username already exists.");
+            }
         }
 
         [HttpPost("generate-token")]
-        public IActionResult GenerateToken([FromBody] LoginRequest request)
+        public async Task<IActionResult> GenerateToken([FromBody] LoginRequest request)
         {
-            if (request == null || request.Username != "testuser" || request.Password != "password")
+            if (request == null || string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
             {
-                return Unauthorized("Invalid credentials.");
+                return BadRequest("Username and password are required.");
             }
 
-            var jwtKey = _configuration["Jwt:Key"];
-            if (string.IsNullOrEmpty(jwtKey))
+            var user = await _userService.AuthenticateUserAsync(request.Username, request.Password);
+
+            if (user != null)
             {
-                return StatusCode(500, "JWT Key is missing or invalid in configuration.");
+                var token = _tokenService.GenerateJwtToken(user);
+                return Ok(new { Token = token });
             }
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-            var claims = new[]
+            else
             {
-                new Claim(ClaimTypes.NameIdentifier, request.Username),
-                new Claim(ClaimTypes.Role, "User")
-            };
-
-            var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
-                _configuration["Jwt:Audience"],
-                claims,
-                expires: DateTime.Now.AddMinutes(120), 
-                signingCredentials: credentials);
-            
-            return Ok(new JwtSecurityTokenHandler().WriteToken(token));
+                return Unauthorized("Invalid username or password.");
+            }
         }
     }
 }

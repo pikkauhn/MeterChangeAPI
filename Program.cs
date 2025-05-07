@@ -1,22 +1,22 @@
-using MeterChangeApi.Security.Middleware;
-using Microsoft.EntityFrameworkCore;
-
-using MeterChangeApi.Data;
-using MeterChangeApi.Options;
-using MeterChangeApi.Services;
-using MeterChangeApi.Repositories;
-using MeterChangeApi.Services.Interfaces;
-using MeterChangeApi.Repositories.Interfaces;
-using MeterChangeApi.Data.Logger;
-using MeterChangeApi.Middleware.ExceptionHandling;
-using MeterChangeApi.Filters;
-using MeterChangeApi.Repositories.Helpers;
-using MeterChangeApi.Services.Helpers;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
+using MeterChangeApi.Data;
+using MeterChangeApi.Filters;
+using MeterChangeApi.Options;
+using MeterChangeApi.Services;
+using MeterChangeApi.Data.Logger;
+using MeterChangeApi.Repositories;
 using MeterChangeApi.Options.Config;
+using MeterChangeApi.Services.Helpers;
+using MeterChangeApi.Security.Middleware;
+using MeterChangeApi.Services.Interfaces;
+using MeterChangeApi.Repositories.Helpers;
+using MeterChangeApi.Repositories.Interfaces;
+using MeterChangeApi.Middleware.ExceptionHandling;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,7 +55,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IDatabaseOperationHandler, DatabaseOperationHandler>();
 builder.Services.AddScoped<IServiceOperationHandler, ServiceOperationHandler>();
+builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
 
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 builder.Services.AddScoped<IArcGISDataRepository, ArcGISDataRepository>();
 builder.Services.AddScoped<IMeterRepository, MeterRepository>();

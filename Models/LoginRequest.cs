@@ -1,4 +1,4 @@
-namespace MeterChangeAPI.Models
+namespace MeterChangeApi.Models
 {
     public class LoginRequest
     {

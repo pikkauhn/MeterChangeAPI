@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/VaW3hZVAAc=",
+  "dgSpecHash": "wr4y6AN6PAw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeAPI.csproj",
+  "projectFilePath": "C:\\Users\\ZBurns\\Documents\\GitHub\\MeterChangeAPI\\MeterChangeApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ZBurns\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\ZBurns\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\ZBurns\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
     "C:\\Users\\ZBurns\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

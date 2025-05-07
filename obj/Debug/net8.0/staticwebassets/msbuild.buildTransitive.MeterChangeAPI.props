@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\buildMultiTargeting\MeterChangeAPI.props" />
+  <Import Project="..\buildMultiTargeting\MeterChangeApi.props" />
 </Project>

@@ -159,29 +159,29 @@ Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX12741: JWT mu
 3/31/2025 11:34:41 AM [Information] Now listening on: http://localhost:5055
 3/31/2025 11:34:41 AM [Information] Application started. Press Ctrl+C to shut down.
 3/31/2025 11:34:41 AM [Information] Hosting environment: Development
-3/31/2025 11:34:41 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/31/2025 11:34:41 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/31/2025 12:26:59 PM [Information] Application is shutting down...
 3/31/2025 12:27:08 PM [Information] Server started at: 03/31/2025 17:27:08
 3/31/2025 12:27:08 PM [Information] Now listening on: http://localhost:5055
 3/31/2025 12:27:08 PM [Information] Application started. Press Ctrl+C to shut down.
 3/31/2025 12:27:08 PM [Information] Hosting environment: Development
-3/31/2025 12:27:08 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/31/2025 12:27:08 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 3/31/2025 12:27:18 PM [Information] Application is shutting down...
 3/31/2025 3:52:08 PM [Information] Server started at: 03/31/2025 20:52:08
 3/31/2025 3:52:08 PM [Information] Now listening on: http://localhost:5055
 3/31/2025 3:52:08 PM [Information] Application started. Press Ctrl+C to shut down.
 3/31/2025 3:52:08 PM [Information] Hosting environment: Development
-3/31/2025 3:52:08 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+3/31/2025 3:52:08 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 4/2/2025 12:39:24 PM [Information] Server started at: 04/02/2025 17:39:24
 4/2/2025 12:39:25 PM [Information] Now listening on: http://localhost:5055
 4/2/2025 12:39:25 PM [Information] Application started. Press Ctrl+C to shut down.
 4/2/2025 12:39:25 PM [Information] Hosting environment: Development
-4/2/2025 12:39:25 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/2/2025 12:39:25 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 4/2/2025 12:53:02 PM [Information] Server started at: 04/02/2025 17:53:02
 4/2/2025 12:53:02 PM [Information] Now listening on: http://localhost:5055
 4/2/2025 12:53:02 PM [Information] Application started. Press Ctrl+C to shut down.
 4/2/2025 12:53:02 PM [Information] Hosting environment: Development
-4/2/2025 12:53:02 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/2/2025 12:53:02 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 4/2/2025 12:53:40 PM [Information] Executed DbCommand (11ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
 FROM `Addresses` AS `a`
@@ -291,7 +291,7 @@ FROM `Addresses` AS `a`
 4/2/2025 1:51:08 PM [Information] Now listening on: http://localhost:5055
 4/2/2025 1:51:08 PM [Information] Application started. Press Ctrl+C to shut down.
 4/2/2025 1:51:08 PM [Information] Hosting environment: Development
-4/2/2025 1:51:08 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/2/2025 1:51:08 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 4/2/2025 2:16:49 PM [Information] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
 FROM `Addresses` AS `a`
@@ -377,7 +377,7 @@ FROM `Addresses` AS `a`
 4/3/2025 8:58:14 AM [Information] Now listening on: http://localhost:5055
 4/3/2025 8:58:14 AM [Information] Application started. Press Ctrl+C to shut down.
 4/3/2025 8:58:14 AM [Information] Hosting environment: Development
-4/3/2025 8:58:14 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/3/2025 8:58:14 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 4/3/2025 8:58:57 AM [Information] Executed DbCommand (9ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
 FROM `Addresses` AS `a`
@@ -583,7 +583,7 @@ FROM `Addresses` AS `a`
 4/3/2025 12:50:35 PM [Information] Now listening on: http://localhost:5055
 4/3/2025 12:50:35 PM [Information] Application started. Press Ctrl+C to shut down.
 4/3/2025 12:50:35 PM [Information] Hosting environment: Development
-4/3/2025 12:50:35 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+4/3/2025 12:50:35 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
 4/3/2025 12:53:23 PM [Information] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
 FROM `Addresses` AS `a`
@@ -728,3 +728,452 @@ LIMIT @__p_1 OFFSET @__p_0
 4/3/2025 2:55:53 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT COUNT(*)
 FROM `Addresses` AS `a`
+4/4/2025 9:39:16 AM [Information] Server started at: 04/04/2025 14:39:16
+4/4/2025 9:39:17 AM [Information] Now listening on: http://localhost:5055
+4/4/2025 9:39:17 AM [Information] Application started. Press Ctrl+C to shut down.
+4/4/2025 9:39:17 AM [Information] Hosting environment: Development
+4/4/2025 9:39:17 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+4/7/2025 8:58:52 AM [Information] Server started at: 04/07/2025 13:58:52
+4/7/2025 8:58:53 AM [Information] Now listening on: http://localhost:5055
+4/7/2025 8:58:53 AM [Information] Application started. Press Ctrl+C to shut down.
+4/7/2025 8:58:53 AM [Information] Hosting environment: Development
+4/7/2025 8:58:53 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+4/7/2025 10:32:32 AM [Information] Executed DbCommand (12ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/7/2025 10:32:32 AM [Information] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/7/2025 10:32:48 AM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/7/2025 10:32:48 AM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/7/2025 10:33:13 AM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/7/2025 10:33:13 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/7/2025 10:34:07 AM [Information] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/7/2025 10:34:07 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/7/2025 10:34:08 AM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/7/2025 10:34:08 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/7/2025 10:34:10 AM [Information] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_0 OFFSET @__p_0
+4/7/2025 10:34:10 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/7/2025 10:34:10 AM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/7/2025 10:34:10 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/9/2025 3:39:09 PM [Information] Server started at: 04/09/2025 20:39:09
+4/9/2025 3:39:10 PM [Information] Now listening on: http://localhost:5055
+4/9/2025 3:39:10 PM [Information] Application started. Press Ctrl+C to shut down.
+4/9/2025 3:39:10 PM [Information] Hosting environment: Development
+4/9/2025 3:39:10 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+4/15/2025 11:25:16 AM [Information] Server started at: 04/15/2025 16:25:16
+4/15/2025 11:25:17 AM [Information] Now listening on: http://localhost:5055
+4/15/2025 11:25:17 AM [Information] Application started. Press Ctrl+C to shut down.
+4/15/2025 11:25:17 AM [Information] Hosting environment: Development
+4/15/2025 11:25:17 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+4/15/2025 3:36:48 PM [Information] Application is shutting down...
+4/15/2025 3:39:20 PM [Information] Server started at: 04/15/2025 20:39:20
+4/15/2025 3:39:21 PM [Information] Now listening on: http://localhost:5055
+4/15/2025 3:39:21 PM [Information] Application started. Press Ctrl+C to shut down.
+4/15/2025 3:39:21 PM [Information] Hosting environment: Development
+4/15/2025 3:39:21 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+4/16/2025 2:54:52 PM [Information] Server started at: 04/16/2025 19:54:52
+4/16/2025 2:54:53 PM [Information] Now listening on: http://localhost:5055
+4/16/2025 2:54:53 PM [Information] Application started. Press Ctrl+C to shut down.
+4/16/2025 2:54:53 PM [Information] Hosting environment: Development
+4/16/2025 2:54:53 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+4/16/2025 4:41:42 PM [Information] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+4/16/2025 4:43:35 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+4/17/2025 12:39:25 PM [Information] Server started at: 04/17/2025 17:39:25
+4/17/2025 12:39:25 PM [Information] Now listening on: http://localhost:5055
+4/17/2025 12:39:25 PM [Information] Application started. Press Ctrl+C to shut down.
+4/17/2025 12:39:25 PM [Information] Hosting environment: Development
+4/17/2025 12:39:25 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+4/17/2025 12:39:38 PM [Information] Executed DbCommand (12ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 12:39:38 PM [Information] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 12:41:23 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 12:41:23 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 12:42:12 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 12:42:12 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 12:43:35 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 12:43:35 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 12:44:53 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 12:44:53 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 12:46:35 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 12:46:35 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 12:47:14 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 12:47:14 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 12:48:45 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 12:48:45 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 12:50:17 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 12:50:17 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:04:53 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:04:53 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:32:33 PM [Information] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:32:33 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:32:51 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:32:51 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:33:35 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:33:35 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:34:21 PM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:34:21 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:40:22 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:40:22 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:41:05 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:41:05 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:41:53 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:41:53 PM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:42:47 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:42:47 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/17/2025 1:43:14 PM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/17/2025 1:43:14 PM [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/18/2025 9:53:14 AM [Information] Server started at: 04/18/2025 14:53:14
+4/18/2025 9:53:15 AM [Information] Now listening on: http://localhost:5055
+4/18/2025 9:53:15 AM [Information] Application started. Press Ctrl+C to shut down.
+4/18/2025 9:53:15 AM [Information] Hosting environment: Development
+4/18/2025 9:53:15 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+4/18/2025 9:53:21 AM [Error] Invalid JWT token: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/17/2025 8:32:51 PM', Current time (UTC): '4/18/2025 2:53:21 PM'.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/17/2025 8:32:51 PM', Current time (UTC): '4/18/2025 2:53:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at MeterChangeApi.Security.Middleware.JwtMiddleware.Invoke(HttpContext context) in C:\Users\ZBurns\Documents\GitHub\MeterChangeApi\Middleware\Security\JwtMiddleware.cs:line 57
+4/18/2025 9:53:31 AM [Information] Executed DbCommand (11ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/18/2025 9:53:31 AM [Information] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/18/2025 9:55:56 AM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/18/2025 9:55:56 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/18/2025 9:57:10 AM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/18/2025 9:57:10 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/18/2025 9:59:40 AM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/18/2025 9:59:40 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/18/2025 10:04:17 AM [Information] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/18/2025 10:04:17 AM [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/18/2025 10:11:17 AM [Information] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `a`.`AddressID`, `a`.`Building_Status`, `a`.`Building_Year`, `a`.`City`, `a`.`Location_Address_Line1`, `a`.`Location_Height`, `a`.`Location_ICN`, `a`.`Location_Latitude`, `a`.`Location_Longitude`, `a`.`Mtr_Desc`, `a`.`SL_Install_Ticket_Date`, `a`.`SL_Material_Cust_Side`, `a`.`SL_Ticket_Material_US`, `a`.`Serv_Est_Date`, `a`.`Serv_Pt_ID`, `a`.`Serv_Year_Final`, `a`.`Zip`
+FROM `Addresses` AS `a`
+ORDER BY `a`.`AddressID`
+LIMIT @__p_1 OFFSET @__p_0
+4/18/2025 10:11:17 AM [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Addresses` AS `a`
+4/24/2025 11:09:30 AM [Information] Server started at: 04/24/2025 16:09:30
+4/24/2025 11:09:31 AM [Information] Now listening on: http://localhost:5055
+4/24/2025 11:09:31 AM [Information] Application started. Press Ctrl+C to shut down.
+4/24/2025 11:09:31 AM [Information] Hosting environment: Development
+4/24/2025 11:09:31 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+5/1/2025 10:39:28 AM [Information] Server started at: 05/01/2025 15:39:28
+5/1/2025 10:39:29 AM [Information] Now listening on: http://localhost:5055
+5/1/2025 10:39:29 AM [Information] Application started. Press Ctrl+C to shut down.
+5/1/2025 10:39:29 AM [Information] Hosting environment: Development
+5/1/2025 10:39:29 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+5/1/2025 1:45:30 PM [Information] Application is shutting down...
+5/5/2025 10:54:38 AM [Information] Server started at: 05/05/2025 15:54:38
+5/5/2025 10:54:38 AM [Information] Now listening on: http://localhost:5055
+5/5/2025 10:54:38 AM [Information] Application started. Press Ctrl+C to shut down.
+5/5/2025 10:54:38 AM [Information] Hosting environment: Development
+5/5/2025 10:54:38 AM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+5/7/2025 3:50:37 PM [Information] Server started at: 05/07/2025 20:50:37
+5/7/2025 3:50:38 PM [Information] Now listening on: https://localhost:7050
+5/7/2025 3:50:38 PM [Information] Now listening on: http://localhost:5055
+5/7/2025 3:50:38 PM [Information] Application started. Press Ctrl+C to shut down.
+5/7/2025 3:50:38 PM [Information] Hosting environment: Development
+5/7/2025 3:50:38 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeApi
+5/7/2025 4:34:09 PM [Information] Server started at: 05/07/2025 21:34:09
+5/7/2025 4:34:10 PM [Information] Now listening on: https://localhost:7050
+5/7/2025 4:34:10 PM [Information] Now listening on: http://localhost:5055
+5/7/2025 4:34:10 PM [Information] Application started. Press Ctrl+C to shut down.
+5/7/2025 4:34:10 PM [Information] Hosting environment: Development
+5/7/2025 4:34:10 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+5/7/2025 4:35:34 PM [Information] Server started at: 05/07/2025 21:35:34
+5/7/2025 4:35:35 PM [Information] Now listening on: https://localhost:7050
+5/7/2025 4:35:35 PM [Information] Now listening on: http://localhost:5055
+5/7/2025 4:35:35 PM [Information] Application started. Press Ctrl+C to shut down.
+5/7/2025 4:35:35 PM [Information] Hosting environment: Development
+5/7/2025 4:35:35 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+5/7/2025 4:39:12 PM [Information] Server started at: 05/07/2025 21:39:12
+5/7/2025 4:39:13 PM [Information] Now listening on: https://localhost:7050
+5/7/2025 4:39:13 PM [Information] Now listening on: http://localhost:5055
+5/7/2025 4:39:13 PM [Information] Application started. Press Ctrl+C to shut down.
+5/7/2025 4:39:13 PM [Information] Hosting environment: Development
+5/7/2025 4:39:13 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+5/7/2025 4:39:33 PM [Error] Unhandled Exception
+System.InvalidOperationException: The entity type 'Users' requires a primary key to be defined. If you intended to use a keyless entity type, call 'HasNoKey' in 'OnModelCreating'. For more information on keyless entity types, see https://go.microsoft.com/fwlink/?linkid=2141943.
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at MySql.EntityFrameworkCore.Internal.MySQLModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__8_4(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at MeterChangeApi.Repositories.UserRepository.UserExistsAsync(String username) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Repositories\UserRepository.cs:line 30
+   at MeterChangeApi.Services.UserService.RegisterUserAsync(String username, String password, String email) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Services\UserService.cs:line 17
+   at MeterChangeApi.Controllers.AuthController.Register(String username, String password, String email) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Controllers\AuthController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+5/7/2025 4:42:04 PM [Information] Server started at: 05/07/2025 21:42:04
+5/7/2025 4:42:04 PM [Information] Now listening on: https://localhost:7050
+5/7/2025 4:42:04 PM [Information] Now listening on: http://localhost:5055
+5/7/2025 4:42:04 PM [Information] Application started. Press Ctrl+C to shut down.
+5/7/2025 4:42:04 PM [Information] Hosting environment: Development
+5/7/2025 4:42:04 PM [Information] Content root path: C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI
+5/7/2025 4:42:19 PM [Information] Executed DbCommand (6ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Users` AS `u`
+    WHERE `u`.`Username` = @__username_0)
+5/7/2025 4:42:19 PM [Information] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Users` (`Email`, `PasswordHash`, `RegistrationDate`, `Username`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `UserId`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `UserId` = LAST_INSERT_ID();
+5/7/2025 4:42:40 PM [Information] Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`UserId`, `u`.`Email`, `u`.`PasswordHash`, `u`.`RegistrationDate`, `u`.`Username`
+FROM `Users` AS `u`
+WHERE `u`.`Username` = @__username_0
+LIMIT 1
+5/7/2025 4:42:41 PM [Error] Unhandled Exception
+System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at MeterChangeApi.Services.TokenService.GenerateJwtToken(Users user) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Services\TokenService.cs:line 23
+   at MeterChangeApi.Controllers.AuthController.GenerateToken(LoginRequest request) in C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\Controllers\AuthController.cs:line 53
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
