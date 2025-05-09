@@ -2,22 +2,25 @@ using MeterChangeApi.Models;
 using MeterChangeApi.Repositories.Interfaces;
 using MeterChangeApi.Services.Interfaces;
 using MeterChangeApi.Middleware.ExceptionHandling;
+using Microsoft.Extensions.Logging;
 
 namespace MeterChangeApi.Services
 {
-    public class MeterService : IMeterService
+    /// <summary>
+    /// Implements the <see cref="IMeterService"/> interface to handle operations related to water meters.
+    /// This service interacts with the <see cref="IMeterRepository"/> for data access and uses the
+    /// <see cref="IServiceOperationHandler"/> for consistent error handling and logging.
+    /// </summary>
+    /// <param name="meterRepository">The repository for accessing water meter data.</param>
+    /// <param name="serviceOperationHandler">The handler for executing service operations with error handling.</param>
+    /// <param name="logger">The logger instance for logging messages within this service.</param>
+    public class MeterService(IMeterRepository meterRepository, IServiceOperationHandler serviceOperationHandler, ILogger<MeterService> logger) : IMeterService
     {
-        private readonly IMeterRepository _meterRepository;
-        private readonly IServiceOperationHandler _serviceOperationHandler;
-        private readonly ILogger<MeterService> _logger;
+        private readonly IMeterRepository _meterRepository = meterRepository;
+        private readonly IServiceOperationHandler _serviceOperationHandler = serviceOperationHandler;
+        private readonly ILogger<MeterService> _logger = logger;
 
-        public MeterService(IMeterRepository meterRepository, IServiceOperationHandler serviceOperationHandler, ILogger<MeterService> logger)
-        {
-            _meterRepository = meterRepository;
-            _serviceOperationHandler = serviceOperationHandler;
-            _logger = logger;
-        }
-
+        /// <inheritdoc />
         public async Task<Wmeter> CreateMeterAsync(Wmeter meter)
         {
             return await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
@@ -26,6 +29,7 @@ namespace MeterChangeApi.Services
             }, "Error creating meter.");
         }
 
+        /// <inheritdoc />
         public async Task DeleteMeterAsync(int id)
         {
             await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
@@ -34,6 +38,7 @@ namespace MeterChangeApi.Services
             }, $"Error deleting meter with ID: {id}.");
         }
 
+        /// <inheritdoc />
         public async Task<IEnumerable<Wmeter>> GetAllMetersAsync()
         {
             return await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
@@ -42,11 +47,13 @@ namespace MeterChangeApi.Services
             }, "Error retrieving all meters.");
         }
 
+        /// <inheritdoc />
         public async Task<Wmeter> GetMeterByIdAsync(int id)
         {
+            // Input validation: Ensure the ID is a positive integer.
             if (id <= 0)
             {
-                _logger.LogError($"Invalid Meter ID: {id}.");
+                _logger.LogError("Invalid Meter ID: {id}.", id);
                 throw new InvalidInputException("Invalid Meter ID");
             }
 
@@ -56,6 +63,7 @@ namespace MeterChangeApi.Services
             }, $"Error retrieving meter with ID: {id}.");
         }
 
+        /// <inheritdoc />
         public async Task<(List<Wmeter>, int)> GetPaginatedMetersAsync(int pageNumber, int pageSize)
         {
             return await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
@@ -64,6 +72,7 @@ namespace MeterChangeApi.Services
             }, $"Error retrieving paginated meters (page {pageNumber}, pageSize {pageSize}).");
         }
 
+        /// <inheritdoc />
         public async Task UpdateMeterAsync(Wmeter meter)
         {
             await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>

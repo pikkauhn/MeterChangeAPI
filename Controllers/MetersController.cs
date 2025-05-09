@@ -5,17 +5,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MeterChangeApi.Controllers
 {
+    /// <summary>
+    /// API controller for managing water meters.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class MetersController : ControllerBase
+    public class MetersController(IMeterService meterService) : ControllerBase
     {
-        private readonly IMeterService _meterService;
+        private readonly IMeterService _meterService = meterService;
 
-        public MetersController(IMeterService meterService)
-        {
-            _meterService = meterService;
-        }
-
+        /// <summary>
+        /// Gets a specific water meter by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the water meter to retrieve.</param>
+        /// <returns>An ActionResult containing the water meter if found, or a NotFound error if not.</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Wmeter>> GetMeter(int id)
         {
@@ -42,6 +45,10 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets all water meters.
+        /// </summary>
+        /// <returns>An ActionResult containing a list of all water meters.</returns>
         [HttpGet("getallmeters")]
         public async Task<ActionResult<IEnumerable<Wmeter>>> GetMeters()
         {
@@ -59,8 +66,14 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets a paginated list of water meters.
+        /// </summary>
+        /// <param name="pageNumber">The page number to retrieve (starting from 1).</param>
+        /// <param name="pageSize">The number of water meters to retrieve per page.</param>
+        /// <returns>An IActionResult containing the paginated list of water meters and pagination metadata.</returns>
         [HttpGet]
-        public async Task<IActionResult> GetPaginatedMeters(int pageNumber, int pageSize)
+        public async Task<IActionResult> GetPaginatedMeters(int pageNumber = 1, int pageSize = 10)
         {
             try
             {
@@ -93,6 +106,11 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Adds a new water meter.
+        /// </summary>
+        /// <param name="meter">The water meter data to add.</param>
+        /// <returns>An ActionResult indicating the success of the creation, including the newly created water meter.</returns>
         [HttpPost]
         public async Task<ActionResult<Wmeter>> AddMeter(Wmeter meter)
         {
@@ -111,6 +129,12 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Updates an existing water meter.
+        /// </summary>
+        /// <param name="id">The ID of the water meter to update.</param>
+        /// <param name="meter">The updated water meter data.</param>
+        /// <returns>An IActionResult indicating the success of the update (NoContent).</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateMeter(int id, Wmeter meter)
         {
@@ -133,6 +157,11 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Deletes a water meter by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the water meter to delete.</param>
+        /// <returns>An IActionResult indicating the success of the deletion (NoContent) or a NotFound error if the water meter doesn't exist.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMeter(int id)
         {

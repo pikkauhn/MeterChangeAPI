@@ -6,17 +6,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MeterChangeApi.Repositories
 {
-    public class ArcGISDataRepository : IArcGISDataRepository
+    /// <summary>
+    /// Implements the <see cref="IArcGISDataRepository"/> interface to provide data access
+    /// for <see cref="ArcGISData"/> entities using Entity Framework Core.
+    /// </summary>
+    /// <param name="context">The database context for the application.</param>
+    /// <param name="dbOperationHandler">The handler for executing database operations with error handling.</param>
+    public class ArcGISDataRepository(ChangeOutContext context, IDatabaseOperationHandler dbOperationHandler) : IArcGISDataRepository
     {
-        private readonly ChangeOutContext _context;
-        private readonly IDatabaseOperationHandler _dbOperationHandler;
+        private readonly ChangeOutContext _context = context;
+        private readonly IDatabaseOperationHandler _dbOperationHandler = dbOperationHandler;
 
-        public ArcGISDataRepository(ChangeOutContext context, IDatabaseOperationHandler dbOperationHandler)
-        {
-            _context = context;
-            _dbOperationHandler = dbOperationHandler;
-        }
-
+        /// <inheritdoc />
         public async Task<ArcGISData> AddAsync(ArcGISData arcGISData)
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
@@ -27,6 +28,7 @@ namespace MeterChangeApi.Repositories
             }, "Error adding ArcGIS data.");
         }
 
+        /// <inheritdoc />
         public async Task DeleteAsync(int id)
         {
             await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
@@ -37,9 +39,11 @@ namespace MeterChangeApi.Repositories
                     _context.ArcGISData.Remove(arcGISData);
                     await _context.SaveChangesAsync();
                 }
+                // If not found, no exception is thrown as per the interface contract for DeleteAsync.
             }, $"Error deleting ArcGIS data with ID {id}.");
         }
 
+        /// <inheritdoc />
         public async Task<IEnumerable<ArcGISData>> GetAllAsync()
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
@@ -50,19 +54,21 @@ namespace MeterChangeApi.Repositories
             }, "Error retrieving all ArcGIS data.");
         }
 
+        /// <inheritdoc />
         public async Task<ArcGISData> GetByIdAsync(int id)
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
                 var arcGISData = await _context.ArcGISData
-                .Include(a => a.WEndpoint)
-                .FirstOrDefaultAsync(a => a.ArcGISDataID == id)
-                ?? throw new NotFoundException($"ArcGISData with ID {id} not found.");
+                    .Include(a => a.WEndpoint)
+                    .FirstOrDefaultAsync(a => a.ArcGISDataID == id)
+                    ?? throw new NotFoundException($"ArcGISData with ID {id} not found.");
 
                 return arcGISData;
             }, $"Error retrieving ArcGISData with ID {id}.");
         }
 
+        /// <inheritdoc />
         public async Task<(List<ArcGISData>, int)> GetPaginatedArcGISDataAsync(int pageNumber, int pageSize)
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
@@ -79,6 +85,7 @@ namespace MeterChangeApi.Repositories
             }, $"Error retrieving paginated ArcGIS data (page:{pageNumber}, pageSize:{pageSize}).");
         }
 
+        /// <inheritdoc />
         public async Task UpdateAsync(ArcGISData arcGISData)
         {
             await _dbOperationHandler.ExecuteDbOperationAsync(async () =>

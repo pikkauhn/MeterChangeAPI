@@ -5,17 +5,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MeterChangeApi.Controllers
 {
+    /// <summary>
+    /// API controller for managing water endpoints.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class EndpointsController : ControllerBase
+    public class EndpointsController(IEndpointService endpointService) : ControllerBase
     {
-        private readonly IEndpointService _endpointService;
+        private readonly IEndpointService _endpointService = endpointService;
 
-        public EndpointsController(IEndpointService endpointService)
-        {
-            _endpointService = endpointService;
-        }
-
+        /// <summary>
+        /// Gets a specific water endpoint by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the water endpoint to retrieve.</param>
+        /// <returns>An ActionResult containing the water endpoint if found, or a NotFound error if not.</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<WEndpoint>> GetEndpoint(int id)
         {
@@ -42,6 +45,10 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets all water endpoints.
+        /// </summary>
+        /// <returns>An ActionResult containing a list of all water endpoints.</returns>
         [HttpGet("getallendpoints")]
         public async Task<ActionResult<IEnumerable<WEndpoint>>> GetAllEndpoints()
         {
@@ -59,8 +66,14 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets a paginated list of water endpoints.
+        /// </summary>
+        /// <param name="pageNumber">The page number to retrieve (starting from 1).</param>
+        /// <param name="pageSize">The number of water endpoints to retrieve per page.</param>
+        /// <returns>An IActionResult containing the paginated list of water endpoints and pagination metadata.</returns>
         [HttpGet]
-        public async Task<IActionResult> GetPaginatedEndpoints(int pageNumber, int pageSize)
+        public async Task<IActionResult> GetPaginatedEndpoints(int pageNumber = 1, int pageSize = 10)
         {
             try
             {
@@ -93,6 +106,11 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Creates a new water endpoint.
+        /// </summary>
+        /// <param name="endpoint">The water endpoint data to create.</param>
+        /// <returns>An ActionResult indicating the success of the creation, including the newly created water endpoint.</returns>
         [HttpPost]
         public async Task<ActionResult<WEndpoint>> CreateEndpoint(WEndpoint endpoint)
         {
@@ -111,6 +129,12 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Updates an existing water endpoint.
+        /// </summary>
+        /// <param name="id">The ID of the water endpoint to update.</param>
+        /// <param name="endpoint">The updated water endpoint data.</param>
+        /// <returns>An IActionResult indicating the success of the update (NoContent).</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateEndpoint(int id, WEndpoint endpoint)
         {
@@ -133,6 +157,11 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Deletes a water endpoint by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the water endpoint to delete.</param>
+        /// <returns>An IActionResult indicating the success of the deletion (NoContent) or a NotFound error if the water endpoint doesn't exist.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEndpoint(int id)
         {

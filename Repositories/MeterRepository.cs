@@ -1,79 +1,79 @@
+using Microsoft.EntityFrameworkCore;
+
 using MeterChangeApi.Data;
 using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Models;
 using MeterChangeApi.Repositories.Interfaces;
-using Microsoft.EntityFrameworkCore;
 
 namespace MeterChangeApi.Repositories
 {
-    public class MeterRepository : IMeterRepository
+    /// <summary>
+    /// Implements the <see cref="IMeterRepository"/> interface to provide data access
+    /// for <see cref="Wmeter"/> entities using Entity Framework Core.
+    /// </summary>
+    /// <param name="context">The database context for the application.</param>
+    /// <param name="dbOperationHandler">The handler for executing database operations with error handling.</param>
+    public class MeterRepository(ChangeOutContext context, IDatabaseOperationHandler dbOperationHandler) : IMeterRepository
     {
-        private readonly ChangeOutContext _context;
-        private readonly IDatabaseOperationHandler _dbOperationHandler;
+        private readonly ChangeOutContext _context = context;
+        private readonly IDatabaseOperationHandler _dbOperationHandler = dbOperationHandler;
 
-        public MeterRepository(ChangeOutContext context, IDatabaseOperationHandler dbOperationHandler)
-        {
-            _context = context;
-            _dbOperationHandler = dbOperationHandler;
-        }
-
+        /// <inheritdoc />
         public async Task<Wmeter> GetByIdAsync(int id)
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-                var meter = await _context.meters
+                var meter = await _context.Meters
                     .Include(m => m.Address)
                     .Include(m => m.WEndpoint)
-                    .FirstOrDefaultAsync(m => m.meterID == id);
-
-                if (meter == null)
-                {
-                    throw new NotFoundException($"Meter with ID {id} not found.");
-                }
-
+                    .FirstOrDefaultAsync(m => m.meterID == id) ?? throw new NotFoundException($"Meter with ID {id} not found.");
                 return meter;
             }, $"Error retrieving meter with ID {id}.");
         }
 
+        /// <inheritdoc />
         public async Task<IEnumerable<Wmeter>> GetAllAsync()
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-                return await _context.meters
+                return await _context.Meters
                     .Include(m => m.Address)
                     .Include(m => m.WEndpoint)
                     .ToListAsync();
             }, "Error retrieving all meters.");
         }
 
+        /// <inheritdoc />
         public async Task<(List<Wmeter>, int)> GetPaginatedMetersAsync(int pageNumber, int pageSize)
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
                 var offset = (pageNumber - 1) * pageSize;
 
-                var meters = await _context.meters
+                var meters = await _context.Meters
                     .Include(m => m.Address)
                     .Include(m => m.WEndpoint)
                     .Skip(offset)
                     .Take(pageSize)
                     .ToListAsync();
 
-                var totalCount = await _context.meters.CountAsync();
+                var totalCount = await _context.Meters.CountAsync();
                 return (meters, totalCount);
             }, $"Error retrieving paginated meters (page:{pageNumber}, pageSize:{pageSize}).");
         }
 
+        /// <inheritdoc />
         public async Task<Wmeter> AddAsync(Wmeter meter)
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-                _context.meters.Add(meter);
+                _context.Meters.Add(meter);
                 await _context.SaveChangesAsync();
                 return meter;
             }, "Error adding meter.");
         }
 
+        /// <inheritdoc />
         public async Task UpdateAsync(Wmeter meter)
         {
             await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
@@ -83,17 +83,13 @@ namespace MeterChangeApi.Repositories
             }, $"Error updating meter with ID {meter.meterID}.");
         }
 
+        /// <inheritdoc />
         public async Task DeleteAsync(int id)
         {
             await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
-                var meter = await _context.meters.FindAsync(id);
-                if (meter == null)
-                {
-                    throw new NotFoundException($"Meter with ID {id} not found.");
-                }
-
-                _context.meters.Remove(meter);
+                var meter = await _context.Meters.FindAsync(id) ?? throw new NotFoundException($"Meter with ID {id} not found.");
+                _context.Meters.Remove(meter);
                 await _context.SaveChangesAsync();
             }, $"Error deleting meter with ID {id}.");
         }

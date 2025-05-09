@@ -5,17 +5,20 @@ using MeterChangeApi.Middleware.ExceptionHandling;
 
 namespace MeterChangeApi.Controllers
 {
+    /// <summary>
+    /// API controller for managing ArcGIS data.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class ArcGISDataController : ControllerBase
+    public class ArcGISDataController(IArcGISDataService arcGISDataService) : ControllerBase
     {
-        private readonly IArcGISDataService _arcGISDataService;
+        private readonly IArcGISDataService _arcGISDataService = arcGISDataService;
 
-        public ArcGISDataController(IArcGISDataService arcGISDataService)
-        {
-            _arcGISDataService = arcGISDataService;
-        }
-
+        /// <summary>
+        /// Gets a specific ArcGIS data record by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the ArcGIS data record to retrieve.</param>
+        /// <returns>An ActionResult containing the ArcGIS data if found, or a NotFound error if not.</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<ArcGISData>> GetArcGISData(int id)
         {
@@ -42,6 +45,10 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets all ArcGIS data records.
+        /// </summary>
+        /// <returns>An ActionResult containing a list of all ArcGIS data records.</returns>
         [HttpGet("getallarcgisdata")]
         public async Task<ActionResult<IEnumerable<ArcGISData>>> GetArcGISData()
         {
@@ -59,8 +66,14 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets a paginated list of ArcGIS data records.
+        /// </summary>
+        /// <param name="pageNumber">The page number to retrieve (starting from 1).</param>
+        /// <param name="pageSize">The number of ArcGIS data records to retrieve per page.</param>
+        /// <returns>An ActionResult containing the paginated list of ArcGIS data and pagination metadata.</returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ArcGISData>>> GetPaginatedArcGISData(int pageNumber, int pageSize)
+        public async Task<ActionResult<IEnumerable<ArcGISData>>> GetPaginatedArcGISData(int pageNumber = 1, int pageSize = 10)
         {
             try
             {
@@ -93,6 +106,11 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Creates a new ArcGIS data record.
+        /// </summary>
+        /// <param name="arcGISData">The ArcGIS data to create.</param>
+        /// <returns>An ActionResult indicating the success of the creation, including the newly created ArcGIS data.</returns>
         [HttpPost]
         public async Task<ActionResult<ArcGISData>> CreateArcGISData(ArcGISData arcGISData)
         {
@@ -111,6 +129,12 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Updates an existing ArcGIS data record.
+        /// </summary>
+        /// <param name="id">The ID of the ArcGIS data record to update.</param>
+        /// <param name="arcGISData">The updated ArcGIS data.</param>
+        /// <returns>An IActionResult indicating the success of the update (NoContent).</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateArcGISData(int id, ArcGISData arcGISData)
         {
@@ -133,6 +157,11 @@ namespace MeterChangeApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Deletes an ArcGIS data record by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the ArcGIS data record to delete.</param>
+        /// <returns>An IActionResult indicating the success of the deletion (NoContent) or a NotFound error if the record doesn't exist.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteArcGISData(int id)
         {

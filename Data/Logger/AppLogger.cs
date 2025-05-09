@@ -1,31 +1,23 @@
+using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MeterChangeApi.Data.Logger
 {
-    public class AppLogger : IAppLogger
+    /// <summary>
+    /// Implements the <see cref="IAppLogger"/> interface, providing a wrapper around the standard <see cref="ILogger"/>.
+    /// </summary>
+    /// <param name="logger">The instance of the generic <see cref="ILogger"/> to use for logging.</param>
+    public class AppLogger(ILogger logger) : IAppLogger
     {
-        private readonly ILogger _logger;
+        private readonly ILogger _logger = logger;
 
-        public AppLogger(ILogger logger)
-        {
-            _logger = logger;
-        }
-        public void LogError(Exception ex, string message, params object[] args)
-        {
-            _logger.LogError(ex, message, args);
-        }
+        /// <inheritdoc />
+        public void LogError(Exception ex, string template, params object[] args) => _logger.LogError(ex, template, args);
 
-        public void LogInformation(string message, params object[] args)
-        {
-            _logger.LogInformation(message, args);
-        }
+        /// <inheritdoc />
+        public void LogInformation(string template, params object[] args) => _logger.LogInformation(template, args);
 
-        public void LogWarning(string message, params object[] args)
-        {
-            _logger.LogWarning(message, args);
-        }
+        /// <inheritdoc />
+        public void LogWarning(string template, params object[] args) => _logger.LogWarning(template, args);
     }
 }
