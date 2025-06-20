@@ -8,6 +8,7 @@ C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\MeterChangeApi.
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\MeterChangeApi.pdb
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\CsvHelper.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Google.Protobuf.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Humanizer.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\K4os.Compression.LZ4.dll
@@ -42,6 +43,7 @@ C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Microsoft.OpenA
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\MySql.Data.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\MySql.EntityFrameworkCore.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -129,14 +131,9 @@ C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\MeterChangeApi.
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\MeterChangeApi.sourcelink.json
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\scopedcss\bundle\MeterChangeApi.styles.css
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets\msbuild.MeterChangeApi.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets\msbuild.MeterChangeApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.MeterChangeApi.props
-C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MeterChangeApi.props
-C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MeterChangeApi.props
-C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\MeterCha.3E6A7813.Up2Date
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\MeterChangeApi.dll
@@ -144,3 +141,7 @@ C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\refint\MeterCha
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\MeterChangeApi.pdb
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\MeterChangeApi.genruntimeconfig.cache
 C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\ref\MeterChangeApi.dll
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\ZBurns\Documents\GitHub\MeterChangeAPI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

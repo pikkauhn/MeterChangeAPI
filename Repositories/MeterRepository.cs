@@ -1,15 +1,14 @@
-using Microsoft.EntityFrameworkCore;
-
 using MeterChangeApi.Data;
 using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Models;
 using MeterChangeApi.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace MeterChangeApi.Repositories
 {
     /// <summary>
     /// Implements the <see cref="IMeterRepository"/> interface to provide data access
-    /// for <see cref="Wmeter"/> entities using Entity Framework Core.
+    /// for <see cref="WMeter"/> entities using Entity Framework Core.
     /// </summary>
     /// <param name="context">The database context for the application.</param>
     /// <param name="dbOperationHandler">The handler for executing database operations with error handling.</param>
@@ -19,7 +18,7 @@ namespace MeterChangeApi.Repositories
         private readonly IDatabaseOperationHandler _dbOperationHandler = dbOperationHandler;
 
         /// <inheritdoc />
-        public async Task<Wmeter> GetByIdAsync(int id)
+        public async Task<WMeter> GetByIdAsync(int id)
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
@@ -32,7 +31,7 @@ namespace MeterChangeApi.Repositories
         }
 
         /// <inheritdoc />
-        public async Task<IEnumerable<Wmeter>> GetAllAsync()
+        public async Task<IEnumerable<WMeter>> GetAllAsync()
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
@@ -44,7 +43,7 @@ namespace MeterChangeApi.Repositories
         }
 
         /// <inheritdoc />
-        public async Task<(List<Wmeter>, int)> GetPaginatedMetersAsync(int pageNumber, int pageSize)
+        public async Task<(List<WMeter>, int)> GetPaginatedMetersAsync(int pageNumber, int pageSize)
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
@@ -63,7 +62,7 @@ namespace MeterChangeApi.Repositories
         }
 
         /// <inheritdoc />
-        public async Task<Wmeter> AddAsync(Wmeter meter)
+        public async Task<WMeter> AddAsync(WMeter meter)
         {
             return await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {
@@ -74,7 +73,7 @@ namespace MeterChangeApi.Repositories
         }
 
         /// <inheritdoc />
-        public async Task UpdateAsync(Wmeter meter)
+        public async Task UpdateAsync(WMeter meter)
         {
             await _dbOperationHandler.ExecuteDbOperationAsync(async () =>
             {

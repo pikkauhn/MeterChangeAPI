@@ -1,9 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using MeterChangeApi.Data;
 using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Models;
 using MeterChangeApi.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace MeterChangeApi.Repositories
 {

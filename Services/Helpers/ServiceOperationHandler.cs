@@ -1,5 +1,5 @@
-using MeterChangeApi.Services.Interfaces;
 using MeterChangeApi.Middleware.ExceptionHandling;
+using MeterChangeApi.Services.Interfaces;
 
 namespace MeterChangeApi.Services.Helpers
 {

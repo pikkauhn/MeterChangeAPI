@@ -1,11 +1,9 @@
-using System.Text.Json;
-
-using MeterChangeApi.Models;
-using MeterChangeApi.Services.Interfaces;
-using MeterChangeApi.Repositories.Interfaces;
 using MeterChangeApi.Middleware.ExceptionHandling;
+using MeterChangeApi.Models;
 using MeterChangeApi.Options.Config;
-using Microsoft.Extensions.Logging;
+using MeterChangeApi.Repositories.Interfaces;
+using MeterChangeApi.Services.Interfaces;
+using System.Text.Json;
 
 namespace MeterChangeApi.Services
 {

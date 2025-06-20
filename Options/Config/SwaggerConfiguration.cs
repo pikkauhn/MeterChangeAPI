@@ -1,5 +1,4 @@
 using Microsoft.OpenApi.Models;
-using MeterChangeApi.Options;
 
 namespace MeterChangeApi.Options.Config
 {

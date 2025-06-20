@@ -1,7 +1,7 @@
-using Microsoft.EntityFrameworkCore;
 using MeterChangeApi.Middleware.ExceptionHandling;
-using MySql.Data.MySqlClient;
 using MeterChangeApi.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
 
 namespace MeterChangeApi.Repositories.Helpers
 {

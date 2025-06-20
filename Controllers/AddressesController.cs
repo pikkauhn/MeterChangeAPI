@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
+using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Models;
 using MeterChangeApi.Services.Interfaces;
-using MeterChangeApi.Middleware.ExceptionHandling;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MeterChangeApi.Controllers
 {

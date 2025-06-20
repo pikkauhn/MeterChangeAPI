@@ -1,8 +1,7 @@
+using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Models;
 using MeterChangeApi.Repositories.Interfaces;
 using MeterChangeApi.Services.Interfaces;
-using MeterChangeApi.Middleware.ExceptionHandling;
-using Microsoft.Extensions.Logging;
 
 namespace MeterChangeApi.Services
 {
@@ -21,7 +20,7 @@ namespace MeterChangeApi.Services
         private readonly ILogger<MeterService> _logger = logger;
 
         /// <inheritdoc />
-        public async Task<Wmeter> CreateMeterAsync(Wmeter meter)
+        public async Task<WMeter> CreateMeterAsync(WMeter meter)
         {
             return await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
             {
@@ -39,7 +38,7 @@ namespace MeterChangeApi.Services
         }
 
         /// <inheritdoc />
-        public async Task<IEnumerable<Wmeter>> GetAllMetersAsync()
+        public async Task<IEnumerable<WMeter>> GetAllMetersAsync()
         {
             return await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
             {
@@ -48,7 +47,7 @@ namespace MeterChangeApi.Services
         }
 
         /// <inheritdoc />
-        public async Task<Wmeter> GetMeterByIdAsync(int id)
+        public async Task<WMeter> GetMeterByIdAsync(int id)
         {
             // Input validation: Ensure the ID is a positive integer.
             if (id <= 0)
@@ -64,7 +63,7 @@ namespace MeterChangeApi.Services
         }
 
         /// <inheritdoc />
-        public async Task<(List<Wmeter>, int)> GetPaginatedMetersAsync(int pageNumber, int pageSize)
+        public async Task<(List<WMeter>, int)> GetPaginatedMetersAsync(int pageNumber, int pageSize)
         {
             return await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
             {
@@ -73,7 +72,7 @@ namespace MeterChangeApi.Services
         }
 
         /// <inheritdoc />
-        public async Task UpdateMeterAsync(Wmeter meter)
+        public async Task UpdateMeterAsync(WMeter meter)
         {
             await _serviceOperationHandler.ExecuteServiceOperationAsync(async () =>
             {

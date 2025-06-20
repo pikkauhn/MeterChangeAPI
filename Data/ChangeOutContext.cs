@@ -20,9 +20,9 @@ namespace MeterChangeApi.Data
         public DbSet<Address> Addresses { get; set; }
 
         /// <summary>
-        /// Represents the database set for the <see cref="Wmeter"/> entity (Water Meter).
+        /// Represents the database set for the <see cref="WMeter"/> entity (Water Meter).
         /// </summary>
-        public DbSet<Wmeter> Meters { get; set; }
+        public DbSet<WMeter> Meters { get; set; }
 
         /// <summary>
         /// Represents the database set for the <see cref="Models.WEndpoint"/> entity (Water Endpoint).

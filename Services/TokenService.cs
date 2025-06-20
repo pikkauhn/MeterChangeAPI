@@ -1,13 +1,11 @@
-﻿using System.Text;
-using System.Security.Claims;
-using System.IdentityModel.Tokens.Jwt;
-
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-
-using MeterChangeApi.Models;
+﻿using MeterChangeApi.Models;
 using MeterChangeApi.Options;
 using MeterChangeApi.Services.Interfaces;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace MeterChangeApi.Services
 {
@@ -89,15 +87,17 @@ namespace MeterChangeApi.Services
                 _logger.LogError("Current signing key is not loaded. Cannot generate token.");
                 return null;
             }
-
+            
             var tokenHandler = new JwtSecurityTokenHandler();
+            var now = DateTime.UtcNow;
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity([
                     new Claim(ClaimTypes.Name, user.Username),
-                    new Claim("UserId", user.UserId.ToString()) // Custom claim for user ID.
+                    new Claim("UserId", user.UserId.ToString())
                 ]),
-                Expires = DateTime.UtcNow.AddHours(_jwtOptions.ExpirationHours),
+                NotBefore = now,
+                Expires = now.AddHours(144),
                 SigningCredentials = new SigningCredentials(_currentSigningKey, SecurityAlgorithms.HmacSha256Signature),
                 Issuer = _jwtOptions.Issuer,
                 Audience = _jwtOptions.Audience
@@ -105,6 +105,7 @@ namespace MeterChangeApi.Services
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
+
 
         /// <summary>
         /// Validates a given JWT token. Checks the signature, issuer, audience, and expiration.
@@ -120,13 +121,13 @@ namespace MeterChangeApi.Services
                 var validationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKeys = ValidSigningKeys, // Use both current and previous keys for validation.
+                    IssuerSigningKeys = new[] { _currentSigningKey },
                     ValidateIssuer = true,
                     ValidIssuer = _jwtOptions.Issuer,
                     ValidateAudience = true,
                     ValidAudience = _jwtOptions.Audience,
                     ValidateLifetime = true,
-                    ClockSkew = TimeSpan.Zero // Recommended to avoid issues with server/client time differences.
+                    ClockSkew = TimeSpan.Zero
                 };
 
                 tokenHandler.ValidateToken(authToken, validationParameters, out SecurityToken validatedToken);
@@ -138,6 +139,7 @@ namespace MeterChangeApi.Services
                 return false;
             }
         }
+
 
         /// <summary>
         /// Gets the list of valid signing keys to use for token validation.

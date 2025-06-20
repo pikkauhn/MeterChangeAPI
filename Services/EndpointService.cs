@@ -1,8 +1,7 @@
+using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Models;
 using MeterChangeApi.Repositories.Interfaces;
 using MeterChangeApi.Services.Interfaces;
-using MeterChangeApi.Middleware.ExceptionHandling;
-using Microsoft.Extensions.Logging;
 
 namespace MeterChangeApi.Services
 {

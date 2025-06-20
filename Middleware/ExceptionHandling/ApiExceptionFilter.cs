@@ -1,8 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.Extensions.Hosting; // Used for IWebHostEnvironment extension methods
-using Microsoft.Extensions.Logging;
-using MeterChangeApi.Services;
 
 namespace MeterChangeApi.Middleware.ExceptionHandling
 {

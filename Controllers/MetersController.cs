@@ -1,6 +1,6 @@
+using MeterChangeApi.Middleware.ExceptionHandling;
 using MeterChangeApi.Models;
 using MeterChangeApi.Services.Interfaces;
-using MeterChangeApi.Middleware.ExceptionHandling;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeterChangeApi.Controllers
@@ -20,7 +20,7 @@ namespace MeterChangeApi.Controllers
         /// <param name="id">The ID of the water meter to retrieve.</param>
         /// <returns>An ActionResult containing the water meter if found, or a NotFound error if not.</returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<Wmeter>> GetMeter(int id)
+        public async Task<ActionResult<WMeter>> GetMeter(int id)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace MeterChangeApi.Controllers
         /// </summary>
         /// <returns>An ActionResult containing a list of all water meters.</returns>
         [HttpGet("getallmeters")]
-        public async Task<ActionResult<IEnumerable<Wmeter>>> GetMeters()
+        public async Task<ActionResult<IEnumerable<WMeter>>> GetMeters()
         {
             try
             {
@@ -112,7 +112,7 @@ namespace MeterChangeApi.Controllers
         /// <param name="meter">The water meter data to add.</param>
         /// <returns>An ActionResult indicating the success of the creation, including the newly created water meter.</returns>
         [HttpPost]
-        public async Task<ActionResult<Wmeter>> AddMeter(Wmeter meter)
+        public async Task<ActionResult<WMeter>> AddMeter(WMeter meter)
         {
             try
             {
@@ -136,7 +136,7 @@ namespace MeterChangeApi.Controllers
         /// <param name="meter">The updated water meter data.</param>
         /// <returns>An IActionResult indicating the success of the update (NoContent).</returns>
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateMeter(int id, Wmeter meter)
+        public async Task<IActionResult> UpdateMeter(int id, WMeter meter)
         {
             try
             {

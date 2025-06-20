@@ -1,21 +1,21 @@
-using System.Text;
-using Microsoft.Extensions.Options;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-
 using MeterChangeApi.Data;
-using MeterChangeApi.Options;
-using MeterChangeApi.Services;
 using MeterChangeApi.Data.Logger;
-using MeterChangeApi.Repositories;
+using MeterChangeApi.Middleware.ExceptionHandling;
+using MeterChangeApi.Middleware.Security;
+using MeterChangeApi.Options;
 using MeterChangeApi.Options.Config;
+using MeterChangeApi.Repositories;
+using MeterChangeApi.Repositories.Interfaces;
+using MeterChangeApi.Services;
+using MeterChangeApi.Services.CsvImport;
 using MeterChangeApi.Services.Helpers;
 using MeterChangeApi.Services.Interfaces;
-using MeterChangeApi.Middleware.Security;
-using MeterChangeApi.Repositories.Helpers;
-using MeterChangeApi.Repositories.Interfaces;
-using MeterChangeApi.Middleware.ExceptionHandling;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,22 +54,55 @@ builder.Services.AddControllers(options =>
 });
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    // Existing Swagger config...
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme. Example: \"Bearer {token}\"",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 // Add a hosted service to generate a JWT key if one doesn't exist.
 builder.Services.AddHostedService<JwtKeyGeneratorService>();
 
 // Register scoped services for database operation handling.
-builder.Services.AddScoped<IDatabaseOperationHandler, DatabaseOperationHandler>();
+builder.Services.AddScoped<MeterChangeApi.Repositories.Interfaces.IDatabaseOperationHandler, MeterChangeApi.Repositories.Helpers.DatabaseOperationHandler>();
 builder.Services.AddScoped<IServiceOperationHandler, ServiceOperationHandler>();
+
+// Register scoped services for  CSV Importing
+builder.Services.AddScoped<ICsvImportService, CsvImportService>();
 
 // Configure the JwtOptions from the "Jwt" section of the configuration.
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
+builder.Services.AddSingleton<ITokenService, TokenService>();
 
 // Register scoped services for token and user management.
-builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+// Register scoped service for Syncronization.
+builder.Services.AddScoped<ISyncService, SyncService>();
 
 // Register scoped repositories for data access.
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
@@ -93,7 +126,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     {
         // Retrieve the JWT security key from the configuration.
         var jwt = GetJwtSecurityKey(builder.Configuration);
-        Console.WriteLine($"JwtKey: {jwt}"); // Output the JWT key for debugging purposes.
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
@@ -102,7 +134,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
-            IssuerSigningKey = jwt // Set the retrieved security key.
+            IssuerSigningKey = jwt, // Set the retrieved security key.
+            ClockSkew = TimeSpan.FromMinutes(5)
         };
     });
 
@@ -127,6 +160,7 @@ if (app.Environment.IsDevelopment() && app.Services.GetRequiredService<IOptions<
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
 }
 
 // Log the server start time.

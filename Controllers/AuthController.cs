@@ -1,13 +1,6 @@
-using System.Text;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-
-using MeterChangeApi.Models;
-using MeterChangeApi.Services.Interfaces;
 using MeterChangeApi.Repositories.Interfaces;
-using MeterChangeApi.Data.Logger;
+using MeterChangeApi.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MeterChangeApi.Controllers
 {

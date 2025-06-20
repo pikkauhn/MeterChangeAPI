@@ -1,5 +1,4 @@
 ﻿using MeterChangeApi.Models;
-using Microsoft.IdentityModel.Tokens;
 
 namespace MeterChangeApi.Services.Interfaces
 {

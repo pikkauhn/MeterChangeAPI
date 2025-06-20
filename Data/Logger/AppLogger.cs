@@ -1,6 +1,3 @@
-using Microsoft.Extensions.Logging;
-using System;
-
 namespace MeterChangeApi.Data.Logger
 {
     /// <summary>

@@ -12,9 +12,9 @@ namespace MeterChangeApi.Models
         public int? Endpoint_SN { get; set; }
 
         public int meterID { get; set; }
-        
+
         [ForeignKey("meterID")]
-        public virtual Wmeter meter { get; set; } = null!;
+        public virtual WMeter meter { get; set; } = null!;
 
         public virtual ArcGISData? ArcGISData { get; set; }
 
